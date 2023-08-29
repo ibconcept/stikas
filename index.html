@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stikas</title>
+  <style>
+    
+    body {
+      font-family: Poppins ;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #303000, black);
+    }
+
+    .header {
+      padding: 20px;
+      background-color: black;
+      color: white;
+      text-align: center;
+    }
+
+    .logo {
+      font-size: 35px;
+      font-weight: bold;
+      display: inline-block;
+      padding-top:50px;
+    }
+
+    .header span {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #ffee00;
+      border-radius: 5px;
+      margin: 10px;
+    }
+
+    .search-box {
+      padding: 10px;
+      border: 1px solid #eeff01;
+      border-radius: 5px;
+      width: 200px; 
+    }
+
+    @media (max-width: 768px) {
+      .header span {
+        display: block;
+        margin: 10px;
+      }
+
+      .search-box {
+        width: 50%; 
+      }
+    }
+
+
+
+
+
+
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+      gap: 12px;      
+      justify-content: center;
+      
+    }
+
+    .card {
+      flex: 0 0 calc(22% - 10px);
+      background-color:yellow;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center; 
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .card figcaption {
+      margin-top: 2px;
+      text-align: center; 
+      padding: 5px 10px; /* Added padding */
+      border-radius: 5px; /* Added border radius */
+      font-size: 14px; /* Added font size */
+    }
+
+    .card:hover {
+  transform: scale(1.05); /* Increase size slightly on hover */
+  transition: transform 0.5s ease; /* Add a smooth transition effect */
+}
+a{text-decoration: none;
+color: white;}
+
+a:hover {
+ color: #eeff01;
+}
+
+  </style>
+
+
+</head>
+
+
+<body>
+  <div class="header">
+    <div class="logo">Stikas</div>
+    <span> <a href="">Matatu stickers</a> | <a href="">Faith stickers </a> 
+       |  <a href="">Funny stickers</a> |  <a href=""> Bumper stickers </a> 
+       |<a href=""> Wisdom stickers </a>| <a href="">Pop stickers </a> </span>
+    <input type="text" class="search-box" placeholder="Search...">
+  </div>
+  <div class="card-container" id="cardContainer">
+    <!-- JavaScript will populate the cards here -->
+  </div>
+
+  <script>
+    const cardContainer = document.getElementById("cardContainer");
+    const imageFilenames = [
+      "1","2","3","4", "5","6", "7", "8", "9", "10", "11","12",
+      "1","2","3","4", "5","6", "7", "8", "9", "10", "11","12",
+      "1","2","3","4", "5","6", "7", "8", "9", "10", "11","12",   
+      "1","2"
+      "1","2","3","4", "5","6", "7", "8", "9", "10", "11","12",   
+      "1","2"    
+      // Add more filenames here
+    ];
+
+    function getRandomImageFilename() {
+      const randomIndex = Math.floor(Math.random() * imageFilenames.length);
+      return imageFilenames[randomIndex];
+    }
+
+    const numberOfCards = imageFilenames.length;
+
+    for (let i = 0; i < numberOfCards; i++) {
+      const card = document.createElement("div");
+      card.classList.add("card");
+
+      const imageFilename = getRandomImageFilename();
+      const imagePath = `images/${imageFilename}.jpg`; // Updated image path
+      const image = document.createElement("img");
+      image.src = imagePath;
+
+      const caption = document.createElement("figcaption");
+      caption.textContent = imageFilename;
+
+      card.appendChild(image);
+      
+      card.appendChild(caption);
+
+      cardContainer.appendChild(card);
+    }
+
+  </script>
+
+
+
+
+
+
+</body>
+</html>
