@@ -1,18 +1,18 @@
-  const cardContainer = document.getElementById("cardContainer");
-  const imageFilenames = [
-  "1","2","3","4", "5","6", "7", "8", "9", "10", "11","12", 
-   
-    // Add more filenames here
-  ];
+const cardContainer = document.getElementById("cardContainer");
+const imageFilenames = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
 
-  function getRandomImageFilename() {
+    // Add more filenames here
+];
+
+function getRandomImageFilename() {
     const randomIndex = Math.floor(Math.random() * imageFilenames.length);
     return imageFilenames[randomIndex];
-  }
+}
 
-  const numberOfCards = imageFilenames.length;
+const numberOfCards = imageFilenames.length;
 
-  for (let i = 0; i < numberOfCards; i++) {
+for (let i = 0; i < numberOfCards; i++) {
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -25,8 +25,8 @@
     caption.textContent = imageFilename;
 
     card.appendChild(image);
-    
+
     card.appendChild(caption);
 
     cardContainer.appendChild(card);
-  }
+}

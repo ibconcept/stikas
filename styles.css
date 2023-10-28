@@ -1,128 +1,145 @@
-
 body {
-    font-family: Poppins ;
+    font-family: Poppins;
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #303000, black);
-  }
+}
 
-  .header {
+.header {
     padding: 20px;
     background-color: black;
     color: white;
     text-align: center;
-  }
+}
 
-  .logo {
+.logo {
     font-size: 45px;
     font-weight: bold;
     display: inline-block;
-    padding-top:50px;
-  }
+    padding-top: 50px;
+}
 
-  .header span {
+.header span {
     display: inline-block;
     padding: 10px;
     border: 1px solid #ffee00;
     border-radius: 5px;
     margin: 10px;
-  }
+}
 
-  .search-box {
+.search-box {
     padding: 10px;
     border: 1px solid #eeff01;
     border-radius: 5px;
-    width: 200px; 
-  }
+    width: 200px;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .header span {
-      display: block;
-      margin: 10px;
+        display: block;
+        margin: 10px;
     }
 
     .search-box {
-      width: 50%; 
+        width: 50%;
     }
+
     .card {
         flex: 0 0 calc(82% - 10px);
     }
 
-  }
+}
 
-  .card-container {
+.card-container {
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    gap: 12px;      
+    gap: 12px;
     justify-content: center;
-    
-  }
-h2{
+
+}
+
+h2 {
     text-align: center;
     color: #eeff01;
-    background-color:rgb(26, 26, 3);
+    background-color: rgb(26, 26, 3);
     border-radius: 20px;
     padding: 1%;
-    display: inline-block;  
+    display: inline-block;
     margin: 1%;
 }
-  .card {
+
+.card {
     flex: 0 0 calc(22% - 10px);
-    background-color:yellow;
+    background-color: yellow;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-  }
+    align-items: center;
+}
 
-  .card img {
+.card img {
     width: 100%;
     height: auto;
     object-fit: cover;
-  }
-
-  .card figcaption {
-    margin-top: 2px;
-    text-align: center; 
-    padding: 5px 10px; /* Added padding */
-    border-radius: 5px; /* Added border radius */
-    font-size: 14px; /* Added font size */
-  }
-
-  .card:hover {
-transform: scale(1.05); /* Increase size slightly on hover */
-transition: transform 0.5s ease; /* Add a smooth transition effect */
 }
-a{text-decoration: none;
-color: white;}
+
+.card figcaption {
+    margin-top: 2px;
+    text-align: center;
+    padding: 5px 10px;
+    /* Added padding */
+    border-radius: 5px;
+    /* Added border radius */
+    font-size: 14px;
+    /* Added font size */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    /* Increase size slightly on hover */
+    transition: transform 0.5s ease;
+    /* Add a smooth transition effect */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
 
 a:hover {
-color: #eeff01;
+    color: #eeff01;
 }
 
 
 /* Center and make divs responsive for phones */
 div {
-    margin: 0 auto; /* Center the div horizontally */
-    max-width: 100%; /* Make the div responsive across all screen sizes */
-   
-    box-sizing: border-box; /* Include padding and border in div width */
-    text-align: center; /* Center the content horizontally */
-    display: flex; /* Enable flexbox layout for vertical centering */
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content vertically */
-  }
-  
-  /* Example: Add background color and some styling to the divs */
-  div { 
+    margin: 0 auto;
+    /* Center the div horizontally */
+    max-width: 100%;
+    /* Make the div responsive across all screen sizes */
+
+    box-sizing: border-box;
+    /* Include padding and border in div width */
+    text-align: center;
+    /* Center the content horizontally */
+    display: flex;
+    /* Enable flexbox layout for vertical centering */
+    justify-content: center;
+    /* Center the content vertically */
+    align-items: center;
+    /* Center the content vertically */
+}
+
+/* Example: Add background color and some styling to the divs */
+div {
     border-radius: 5px;
-  }
-  
-  /* Center the footer horizontally and style it */
-footer { 
+}
+
+/* Center the footer horizontally and style it */
+footer {
     color: #ffd700;
     padding: 20px 0;
 }
@@ -136,7 +153,7 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer-social a { 
+.footer-social a {
     margin-right: 2%;
     text-decoration: none;
     font-size: 24px;
@@ -148,16 +165,20 @@ footer {
 
 /* Example: Add hover effect for social links */
 .footer-social a:hover {
-    color: #dad9d3; /* Change the color on hover */
+    color: #dad9d3;
+    /* Change the color on hover */
 }
+
 /* Fixed position navbar on the left */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    width: 100px; /* Customize the width of the navbar */
-    background-color: #333318; /* Customize the background color */
+    width: 100px;
+    /* Customize the width of the navbar */
+    background-color: #333318;
+    /* Customize the background color */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -167,15 +188,19 @@ footer {
 /* Style for navbar icons */
 .navbar-icon {
     text-align: center;
-    color: #fff; /* Customize text color */
-    padding: 10px; /* Add some padding between icons and text */
+    color: #fff;
+    /* Customize text color */
+    padding: 10px;
+    /* Add some padding between icons and text */
 }
 
 .navbar-icon img {
-    width: 32px; /* Customize icon size */
+    width: 32px;
+    /* Customize icon size */
     height: 32px;
 }
 
 .content {
-    margin-left: 100px; /* Ensure content does not overlap with the navbar */
+    margin-left: 100px;
+    /* Ensure content does not overlap with the navbar */
 }
