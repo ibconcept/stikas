@@ -150,3 +150,32 @@ footer {
 .footer-social a:hover {
     color: #dad9d3; /* Change the color on hover */
 }
+/* Fixed position navbar on the left */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100px; /* Customize the width of the navbar */
+    background-color: #333318; /* Customize the background color */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Style for navbar icons */
+.navbar-icon {
+    text-align: center;
+    color: #fff; /* Customize text color */
+    padding: 10px; /* Add some padding between icons and text */
+}
+
+.navbar-icon img {
+    width: 32px; /* Customize icon size */
+    height: 32px;
+}
+
+.content {
+    margin-left: 100px; /* Ensure content does not overlap with the navbar */
+}
