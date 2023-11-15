@@ -1,7 +1,7 @@
 body {
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 0; 
     background: linear-gradient(to bottom, #303000, black);
 }
 
@@ -10,13 +10,23 @@ body {
     background-color: black;
     color: white;
     text-align: center;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h2{
+text-align: center;
+
 }
 
 .logo {
     font-size: 45px;
     font-weight: bold;
     display: inline-block;
-    padding-top: 50px;
+    padding-top: 10px;
+    padding-right: 10pX;
 }
 
 .header span {
@@ -59,16 +69,6 @@ body {
 
 }
 
-h2 {
-    text-align: center;
-    color: #eeff01;
-    background-color: rgb(26, 26, 3);
-    border-radius: 20px;
-    padding: 1%;
-    display: inline-block;
-    margin: 1%;
-}
-
 .card {
     flex: 0 0 calc(22% - 10px);
     background-color: yellow;
@@ -81,7 +81,8 @@ h2 {
 }
 
 .card img {
-    width: 100%;
+    width: 90%;
+    padding: 2px;
     height: auto;
     object-fit: cover;
 }
@@ -89,59 +90,42 @@ h2 {
 .card figcaption {
     margin-top: 2px;
     text-align: center;
-    padding: 5px 10px;
-    /* Added padding */
-    border-radius: 5px;
-    /* Added border radius */
-    font-size: 14px;
-    /* Added font size */
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    font-size: 12px; 
 }
 
 .card:hover {
-    transform: scale(1.05);
-    /* Increase size slightly on hover */
-    transition: transform 0.5s ease;
-    /* Add a smooth transition effect */
+    transform: scale(1.05); 
+    transition: transform 0.5s ease; 
 }
+ 
+.photo {
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
-    color: #eeff01;
-}
-
-
-/* Center and make divs responsive for phones */
-div {
-    margin: 0 auto;
-    /* Center the div horizontally */
-    max-width: 100%;
-    /* Make the div responsive across all screen sizes */
-
-    box-sizing: border-box;
-    /* Include padding and border in div width */
+    max-width: 100%; 
+    width: 80%;  
     text-align: center;
-    /* Center the content horizontally */
-    display: flex;
-    /* Enable flexbox layout for vertical centering */
+    margin-left: 10%;
+
+}
+
+
+div { 
+    
+    box-sizing: border-box; 
+    text-align: center; 
+    display: inline-flex;  
+    align-items: center; 
+    
     justify-content: center;
-    /* Center the content vertically */
-    align-items: center;
-    /* Center the content vertically */
-}
 
-/* Example: Add background color and some styling to the divs */
-div {
-    border-radius: 5px;
-}
 
-/* Center the footer horizontally and style it */
+
+} 
 footer {
     color: #ffd700;
     padding: 20px 0;
+    background-color: grey;
 }
 
 .footer-content {
@@ -162,45 +146,44 @@ footer {
 .footer-info p {
     margin: 0;
 }
-
-/* Example: Add hover effect for social links */
+ 
 .footer-social a:hover {
-    color: #dad9d3;
-    /* Change the color on hover */
-}
-
-/* Fixed position navbar on the left */
+    color: #dad9d3; 
+} 
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     height: 100%;
-    width: 100px;
-    /* Customize the width of the navbar */
-    background-color: #333318;
-    /* Customize the background color */
+    width: 100px; 
+    background-color: #333318; 
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
+} 
 
-/* Style for navbar icons */
 .navbar-icon {
     text-align: center;
-    color: #fff;
-    /* Customize text color */
-    padding: 10px;
-    /* Add some padding between icons and text */
+    color: #fff; 
+    padding: 10px; 
 }
 
 .navbar-icon img {
-    width: 32px;
-    /* Customize icon size */
+    width: 32px; 
     height: 32px;
 }
 
-.content {
-    margin-left: 100px;
-    /* Ensure content does not overlap with the navbar */
+a {
+    color: #eeff01;   
+    transition: color 0.3s ease;
+    text-decoration: none;
+    background-color: black;
+    margin: 1%; 
+    padding: 3px;
+  }
+   
+a:hover {
+    color: white;
 }
+ 
