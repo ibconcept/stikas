@@ -25,7 +25,7 @@ for (let i = 0; i < numberOfCards; i++) {
     card.classList.add("card");
 
     const imageFilename = getRandomImageFilename();
-    const imagePath = `images/${imageFilename}.svg`; 
+    const imagePath = `images/${imageFilename}.SVG`; 
     const image = document.createElement("img");
     image.src = imagePath;
 
