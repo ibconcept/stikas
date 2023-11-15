@@ -22,7 +22,8 @@ text-align: center;
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 55px;
+    max-width: 100%;
     font-weight: bold;
     display: inline-block;
     padding: 3px;
