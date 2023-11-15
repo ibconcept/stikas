@@ -70,14 +70,14 @@ text-align: center;
 }
 
 .card {
-    flex: 0 0 calc(22% - 10px);
-    background-color: yellow;
+    flex: 0 0 calc(22% - 10px); 
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
+    animation: colorChange 3s infinite;
 }
 
 .card img {
@@ -95,10 +95,20 @@ text-align: center;
     font-size: 12px; 
 }
 
-.card:hover {
-    transform: scale(1.05); 
-    transition: transform 0.5s ease; 
+.card:hover, .photo:hover, .div:hover {
+    transform: scale(2.05); 
+    transition: transform 0.8s ease; 
 }
+
+@keyframes colorChange {
+    0%, 50% {
+      background-color: #eeff01;
+    }
+    51%, 100% {
+      background-color: #303000;
+    }
+  }
+   
  
 .photo {
 
@@ -122,6 +132,21 @@ div {
 
 
 } 
+
+a {
+    color: #eeff01;   
+    transition: color 0.3s ease;
+    text-decoration: none;
+    background-color: black;
+    margin: 1%; 
+    padding: 3px;
+  }
+   
+a:hover {
+    color: red;
+}
+ 
+
 footer {
     color: #ffd700;
     padding: 20px 0;
@@ -150,40 +175,3 @@ footer {
 .footer-social a:hover {
     color: #dad9d3; 
 } 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100px; 
-    background-color: #333318; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-} 
-
-.navbar-icon {
-    text-align: center;
-    color: #fff; 
-    padding: 10px; 
-}
-
-.navbar-icon img {
-    width: 32px; 
-    height: 32px;
-}
-
-a {
-    color: #eeff01;   
-    transition: color 0.3s ease;
-    text-decoration: none;
-    background-color: black;
-    margin: 1%; 
-    padding: 3px;
-  }
-   
-a:hover {
-    color: white;
-}
- 
