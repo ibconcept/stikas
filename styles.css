@@ -106,7 +106,7 @@ text-align: center;
       background-color: #eeff01;
     }
     51%, 100% {
-      background-color: #303000;
+      background-color: #96968b;
     }
   }
    
@@ -125,10 +125,11 @@ div {
     
     box-sizing: border-box; 
     text-align: center; 
-    display: inline-flex;  
+    display: flex;  
     align-items: center; 
-    
     justify-content: center;
+    padding: auto;
+    margin: 2px;
 
 
 
