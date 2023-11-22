@@ -135,6 +135,13 @@ div {
 
 } 
 
+button {
+
+position: absolute;
+left: calc(50% - 50px);
+
+}
+
 a {
     color: #eeff01;   
     transition: color 0.3s ease;
