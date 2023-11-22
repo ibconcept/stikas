@@ -1,4 +1,5 @@
 # stikas.co.ke
+<<<<<<< HEAD
 
 # Stikas.co.ke
 
@@ -47,3 +48,19 @@ If you would like to contribute to Stikas.co.ke, please follow these steps:
 
 This project is licensed under the [MIT License](LICENSE).
 
+=======
+stikas is where u can downoad kenyas most common and new ready to cut or prin stickers 
+for cars and other general places. the stickers are classified according from faith stickers
+tomost common sticker used in the matatu culture among many others.
+stickers also offers most current memesand fads that are  trendy in the market!!!!
+
+
+
+
+with stikas, u will always find sometning too stick
+
+..
+
+
+stikas.co.ke
+>>>>>>> 57aa9fc4b10a69d75079b57a368bf6a782ed7c44
