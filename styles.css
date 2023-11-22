@@ -139,6 +139,8 @@ button {
 
 position: absolute;
 left: calc(50% - 50px);
+width: 12%;
+margin-top: 5%;
 
 }
 
