@@ -8,6 +8,51 @@
     <title>Forums</title>
 </head>
 <body>
-    
+  <div>
+    <h1>Forum</h1>
+    <div id="posts"></div>
+    <form id="postForm">
+      <input type="text" id="postInput" placeholder="Write something...">
+      <button type="submit">Post</button>
+    </form>
+  </div>
+
+  <script>
+    // Function to handle new posts
+    function addPost(event) {
+      event.preventDefault(); // Prevents form from submitting and refreshing the page
+      const postInput = document.getElementById('postInput');
+      const postsContainer = document.getElementById('posts');
+
+      const newPost = document.createElement('div');
+      const text = document.createTextNode(postInput.value);
+      newPost.appendChild(text);
+
+      postsContainer.appendChild(newPost);
+      postInput.value = ''; // Clear the input field after posting
+
+      // Save posts to local storage
+      const posts = localStorage.getItem('forumPosts') ? JSON.parse(localStorage.getItem('forumPosts')) : [];
+      posts.push(postInput.value);
+      localStorage.setItem('forumPosts', JSON.stringify(posts));
+    }
+
+    // Load saved posts when the page loads
+    window.addEventListener('load', function() {
+      const posts = localStorage.getItem('forumPosts');
+      if (posts) {
+        const postsArray = JSON.parse(posts);
+        const postsContainer = document.getElementById('posts');
+        postsArray.forEach(function(postText) {
+          const postDiv = document.createElement('div');
+          postDiv.textContent = postText;
+          postsContainer.appendChild(postDiv);
+        });
+      }
+    });
+
+    // Event listener for form submission
+    document.getElementById('postForm').addEventListener('submit', addPost);
+  </script>
 </body>
 </html>
