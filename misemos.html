@@ -1,14 +1,74 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <title>sayings</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Swahili Quotes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .quoteContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .quote {
+      width: 30%;
+      background-color: #FFD700;
+      border-radius: 5px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      color: #000;
+    }
+
+    @media (max-width: 768px) {
+      .quote {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="quoteContainer"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const quoteContainer = document.querySelector('.quoteContainer');
+
+      // Creating quotes dynamically in JavaScript
+      const quotes = [
+        { type: 'funny', language: 'Swahili', text: 'Quote 1...' },
+        { type: 'funny', language: 'Swahili', text: 'Quote 2...' },
+        { type: 'powerful', language: 'Swahili', text: 'Quote 3...' },
+        { type: 'powerful', language: 'Swahili', text: 'Quote 4...' },
+        // Add more quotes here...
+      ];
+
+      // Sort quotes by type
+      const groupedQuotes = {};
+      quotes.forEach(function(quote) {
+        if (!groupedQuotes[quote.type]) {
+          groupedQuotes[quote.type] = [];
+        }
+        groupedQuotes[quote.type].push(quote);
+      });
+
+      // Display quotes grouped by type
+      for (const type in groupedQuotes) {
+        const quotesOfType = groupedQuotes[type];
+        quotesOfType.forEach(function(quote) {
+          const quoteDiv = document.createElement('div');
+          quoteDiv.classList.add('quote');
+          quoteDiv.textContent = `${quote.type} - ${quote.text}`;
+          quoteContainer.appendChild(quoteDiv);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
