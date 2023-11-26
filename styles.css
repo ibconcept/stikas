@@ -5,7 +5,7 @@ body {
     color: aliceblue;
     background:yellow;
     
- background: linear-gradient(to bottom, #303000, black); 
+   background: linear-gradient(to bottom, #303000, black); 
 
 }
 
@@ -101,8 +101,8 @@ text-align: center;
 }
 
 .card:hover, .photo:hover, .div:hover {
-    transform: scale(2.05); 
-    transition: transform 0.8s ease; 
+    transform: scale(1.09); 
+    transition: transform 0.4s ease; 
 }
 
 @keyframes colorChange {
@@ -140,10 +140,8 @@ div {
 } 
 
 button {
-
-position: absolute;
-left: calc(50% - 50px);
-width: 12%;
+  
+width: 300px;
 margin-top: 5%;
 
 }
