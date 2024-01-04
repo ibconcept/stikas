@@ -3,69 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <title>Stikas Misemos</title>
- <style>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style> 
   
-   /* Default styles for quoteContainer and quote */
-.quoteContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
 
-.quote {
-  width: 30vw;
-  background-color: #FFD700;
-  border-radius: 5px;
-  margin: 5px;
-  padding: 10px;
-  font-weight: bold;
-  text-align: center;
-  color: #000;
-}
+    .quoteContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
 
-/* Media query for screens smaller than 768px */
-@media (max-width: 768px) {
-  .quote {
-    width: 90vw;
-    font-weight: 300;
-  }
-}
+    .quote {
+      width: 30%;
+      background-color: #FFD700;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: #000;
+      display: flex;
+    }
 
-/* Another media query for screens smaller than 480px */
-@media (max-width: 480px) {
-  .quoteContainer {
-    justify-content: center;
-  }
-}
-
+    @media (max-width: 768px) {
+      .quote {
+        width: 90%;
+        font-weight: 100;
+      }
+      .header , .logo {
+        display: block;
+        max-width: 100%;
+        font-size: 1.5em;
+        
+      }
+    }
+  
+  
+  
   </style>
 </head>
-
-
 <body>
 
-    <div class="header">
-        <div class="logo">Stikas</div>
-        <div class="logo">Get silly !! </div>
-        <span> <a href="matatulogos.html">Matatu stickers</a> | <a href="gospellogos.html">Faith stickers </a>
-          | <a href="funny&chocha.html">Funny stickers</a> | <a href="funny&chocha.html"> Bumper stickers </a>
-          |<a href="wisemanquotes.html"> Wisdom stickers </a>| <a href="newlogos.html">Pop stickers </a> </span>
-        <input type="text" class="search-box" placeholder="Search...">
-    
-      </div>
+<div class="header">
+    <!-- Your header content -->
+</div>
 
-      <div class="logo" style="text-align: center; display: block; color: #fceb06;"> <img src="emoji.png" alt=""> Enjoy messages <br>you can have printed at Stikas</div>
+<div class="logo" style="text-align: center; display: block; color: #fceb06;"> <img src="emoji.png" alt=""> Enjoy messages <br>you can have printed at Stikas</div>
     
 <br>
-  <div class="quoteContainer"></div>
+<div class="quoteContainer"></div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const quoteContainer = document.querySelector('.quoteContainer');
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const quoteContainer = document.querySelector('.quoteContainer');
 
-      // Creating quotes dynamically in JavaScript
-      const quotes = [
-  { type: 'funny', language: 'Swahili', text: 'Washahidi Bado Ni Vipofu!' },
+    // Creating quotes dynamically in JavaScript
+    const quotes = [
+         
+
+    { type: 'funny', language: 'Swahili', text: 'Washahidi Bado Ni Vipofu!' },
   { type: 'funny', language: 'Swahili', text: 'utamu iko ndani' },
   { type: 'funny', language: 'Swahili', text: 'this is not a drill' },
   { type: 'funny', language: 'Swahili', text: 'Raha jipe mwenyewe!' },
@@ -116,28 +117,65 @@
 
 
 
-      ];
 
-      // Sort quotes by type
-      const groupedQuotes = {};
-      quotes.forEach(function(quote) {
-        if (!groupedQuotes[quote.type]) {
-          groupedQuotes[quote.type] = [];
-        }
-        groupedQuotes[quote.type].push(quote);
+];
+
+    // Function to get a random color
+    function getRandomColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r},${g},${b})`;
+    }
+
+    // Function to shuffle quotes array
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Sort quotes by type
+    const groupedQuotes = {};
+    quotes.forEach(function(quote) {
+      if (!groupedQuotes[quote.type]) {
+        groupedQuotes[quote.type] = [];
+      }
+      groupedQuotes[quote.type].push(quote);
+    });
+
+    // Combine all quotes back in a sorted order
+    const sortedQuotes = [];
+    for (const type in groupedQuotes) {
+      const quotesOfType = groupedQuotes[type];
+      sortedQuotes.push(...quotesOfType);
+    }
+
+    // Shuffle quotes array
+    const shuffledQuotes = shuffleArray(sortedQuotes);
+
+    // Create and append quotes with event listeners for hover and click
+    shuffledQuotes.forEach(function(quote) {
+      const quoteDiv = document.createElement('div');
+      quoteDiv.classList.add('quote');
+      quoteDiv.textContent = `${quote.type} - ${quote.text}`;
+      quoteContainer.appendChild(quoteDiv);
+
+      // Event listeners for hover and click
+      quoteDiv.addEventListener('mouseover', function() {
+        this.style.backgroundColor = getRandomColor();
+        this.style.color = getRandomColor();
       });
 
-      // Display quotes grouped by type
-      for (const type in groupedQuotes) {
-        const quotesOfType = groupedQuotes[type];
-        quotesOfType.forEach(function(quote) {
-          const quoteDiv = document.createElement('div');
-          quoteDiv.classList.add('quote');
-          quoteDiv.textContent = `${quote.type} - ${quote.text}`;
-          quoteContainer.appendChild(quoteDiv);
-        });
-      }
+      quoteDiv.addEventListener('click', function() {
+        this.style.backgroundColor = getRandomColor();
+        this.style.color = getRandomColor();
+      });
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
