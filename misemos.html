@@ -12,7 +12,7 @@
     }
 
     .quote {
-      width: 30%;
+      width: 30vw;
       background-color: #FFD700;
       border-radius: 5px;
       margin: 5px;
@@ -24,6 +24,11 @@
     }
 
     @media (max-width: 768px) {
+
+      .quoteContainer {
+    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
+    justify-content: center; /* Center items on smaller screens */
+  }
       .quote {
         width: 90vw;
         display: flex;
