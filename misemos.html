@@ -5,41 +5,39 @@
   <title>Stikas Misemos</title>
  <style>
   
-    .quoteContainer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
+   /* Default styles for quoteContainer and quote */
+.quoteContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-    .quote {
-      width: 30vw;
-      background-color: #FFD700;
-      border-radius: 5px;
-      margin: 5px;
-      padding: 10px;
-      font-weight: bold;
-      text-align: center;
-      color: #000;
-      display: flex;
-    }
+.quote {
+  width: 30vw;
+  background-color: #FFD700;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+}
 
-    @media (max-width: 768px) {
-
-      .quoteContainer {
-    flex-wrap: nowrap; /* Prevent wrapping on smaller screens */
-    justify-content: center; /* Center items on smaller screens */
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .quote {
+    width: 90vw;
+    font-weight: 300;
   }
-      .quote {
-        width: 90vw;
-        display: flex;
-        font-weight: 300;
-      }
-      .header , .logo {
-        display: inline-block;
-        font-size: 1.5em;
-        
-      }
-    }
+}
+
+/* Another media query for screens smaller than 480px */
+@media (max-width: 480px) {
+  .quoteContainer {
+    justify-content: center;
+  }
+}
+
   </style>
 </head>
 
