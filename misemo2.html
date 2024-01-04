@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stikas Misemos</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style> 
+  
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .quoteContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .quote {
+      width: 30%;
+      background-color: #FFD700;
+      border-radius: 5px;
+      margin: 5px;
+      padding: 10px;
+      font-weight: bold;
+      text-align: center;
+      color: #000;
+      display: flex;
+    }
+
+    @media (max-width: 768px) {
+      .quote {
+        width: 90%;
+        font-weight: 100;
+      }
+      .header , .logo {
+        display: block;
+        max-width: 100%;
+        font-size: 1.5em;
+        
+      }
+    }
+  
+  
+  
+  </style>
+</head>
+<body>
+
+<div class="header">
+    <!-- Your header content -->
+</div>
+
+<div class="logo" style="text-align: center; display: block; color: #fceb06;"> <img src="emoji.png" alt=""> Enjoy messages <br>you can have printed at Stikas</div>
+    
+<br>
+<div class="quoteContainer"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const quoteContainer = document.querySelector('.quoteContainer');
+
+    // Creating quotes dynamically in JavaScript
+    const quotes = [
+         
+
+    { type: 'funny', language: 'Swahili', text: 'Washahidi Bado Ni Vipofu!' },
+  { type: 'funny', language: 'Swahili', text: 'utamu iko ndani' },
+  { type: 'funny', language: 'Swahili', text: 'this is not a drill' },
+  { type: 'funny', language: 'Swahili', text: 'Raha jipe mwenyewe!' },
+  { type: 'funny', language: 'Swahili', text: 'Haitaki hasira!!' },
+  // Add more quotes here...
+  { type: 'powerful', language: 'Swahili', text: 'Good over evil, anytime' },
+  { type: 'powerful', language: 'Swahili', text: 'Why worry?, Be happy!' },
+  { type: 'powerful', language: 'Swahili', text: 'A man who uses force is afraid of reasoning' },
+  { type: 'powerful', language: 'Swahili', text: 'Still waters run deep' },
+  { type: 'powerful', language: 'Swahili', text: 'Shida yako ni mdomo' },
+
+  { type: 'funny', language: 'Swahili', text: 'Usijaribu kujua siri zangu, hata mimi mwenyewe sipati picha!' },
+  { type: 'funny', language: 'Swahili', text: 'Mimi si mvivu, napenda kupumzika tu!' },
+  { type: 'funny', language: 'Swahili', text: 'Cheza kama hakuna anayeangalia, lipa kama kuna CCTV!' },
+  { type: 'funny', language: 'Swahili', text: 'Kama Raha Yaua Sumu Niya Nini' },
+  { type: 'funny', language: 'Swahili', text: 'Kama Ni Kali Tema Kitamu Kilambwe' },
+  { type: 'funny', language: 'Swahili', text: 'Pesa Ndio Silaha, Bunduki Ni Mzigo Tu!' },
+  { type: 'funny', language: 'Swahili', text: 'Pambana Na Hali Yako' },
+  { type: 'funny', language: 'Swahili', text: 'Haitaki Hasira!' },
+  { type: 'funny', language: 'Swahili', text: 'We do not negotiate with terrorist!' },
+  { type: 'funny', language: 'Swahili', text: 'Hii Ni Kanairo Hatukai Sana!!' },
+  { type: 'funny', language: 'Swahili', text: 'Mboko Jinga !!!!!!!' },
+  { type: 'funny', language: 'Swahili', text: 'Cheza Na Rika Yako !' },
+  { type: 'funny', language: 'Swahili', text: 'Raha Jipe Mwenyewe !' },
+  { type: 'funny', language: 'Swahili', text: 'Zoea Kukaa Nyuma Mbele Kuna Wenyewe' },
+  { type: 'funny', language: 'Swahili', text: 'Hatukai Sana, Ni Manyanga!' },
+  { type: 'funny', language: 'Swahili', text: 'Mimi Sipangwingwi...!' },
+  { type: 'funny', language: 'Swahili', text: 'Ata Ukiniangali Vibaya, Unaniona Vizuri' },
+  { type: 'funny', language: 'Swahili', text: 'Kaa Uko Na Mbio, Ungekuja Jana' },
+  { type: 'funny', language: 'Swahili', text: 'Mambo Ya Stima Achia Watu Wa Stima!' },
+  { type: 'funny', language: 'Swahili', text: 'Hatukai Sana, Ni Manyanga' },
+  { type: 'funny', language: 'Swahili', text: 'Akikunyima Tena, Nipigie' },
+  { type: 'funny', language: 'Swahili', text: 'Poleni Tuko Mavitu' },
+  { type: 'funny', language: 'Swahili', text: 'Ambia Serikali Ikupee Kazi!' },
+  { type: 'funny', language: 'Swahili', text: 'Fagia Kwako Kwangu Safi' },
+  { type: 'funny', language: 'Swahili', text: 'Huu Upuzi Ndio Kazi !' },
+  { type: 'funny', language: 'Swahili', text: 'Hatukai Sana, Ni Manyanga' },
+  { type: 'funny', language: 'Swahili', text: 'Kulipa Ni Lazma, Change Nikukumbuka' },
+  { type: 'funny', language: 'Swahili', text: 'Akikunyima Tena, Nipigie !' },
+  { type: 'funny', language: 'Swahili', text: 'Wachana Na Sisi Ambia Serikali Ikupee Kazi!' },
+  { type: 'funny', language: 'Swahili', text: 'Ambia Serikali Ikupee Kazi!' },
+  { type: 'funny', language: 'Swahili', text: 'Newcomers Wapewe Pampers!' },
+  { type: 'funny', language: 'Swahili', text: 'Nitakufinyaa!...ungekuja Jana' },
+  { type: 'funny', language: 'Swahili', text: 'Kwani Ni Kesho!' },
+  { type: 'funny', language: 'Swahili', text: 'Harufu Ni Mbaya! Tushaa Shooter!' }
+
+
+
+
+
+
+];
+
+    // Function to get a random color
+    function getRandomColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      return `rgb(${r},${g},${b})`;
+    }
+
+    // Function to shuffle quotes array
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Sort quotes by type
+    const groupedQuotes = {};
+    quotes.forEach(function(quote) {
+      if (!groupedQuotes[quote.type]) {
+        groupedQuotes[quote.type] = [];
+      }
+      groupedQuotes[quote.type].push(quote);
+    });
+
+    // Combine all quotes back in a sorted order
+    const sortedQuotes = [];
+    for (const type in groupedQuotes) {
+      const quotesOfType = groupedQuotes[type];
+      sortedQuotes.push(...quotesOfType);
+    }
+
+    // Shuffle quotes array
+    const shuffledQuotes = shuffleArray(sortedQuotes);
+
+    // Create and append quotes with event listeners for hover and click
+    shuffledQuotes.forEach(function(quote) {
+      const quoteDiv = document.createElement('div');
+      quoteDiv.classList.add('quote');
+      quoteDiv.textContent = `${quote.type} - ${quote.text}`;
+      quoteContainer.appendChild(quoteDiv);
+
+      // Event listeners for hover and click
+      quoteDiv.addEventListener('mouseover', function() {
+        this.style.backgroundColor = getRandomColor();
+        this.style.color = getRandomColor();
+      });
+
+      quoteDiv.addEventListener('click', function() {
+        this.style.backgroundColor = getRandomColor();
+        this.style.color = getRandomColor();
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
