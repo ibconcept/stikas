@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Gallery</title>
+  <style>
+    /* Your CSS styles here */
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .image-container img {
+      max-width: 200px;
+      max-height: 200px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="image-container" id="imageContainer"></div>
+
+  <script>
+    const container = document.getElementById('imageContainer');
+
+    fetch('/imagesList')
+      .then(response => response.json())
+      .then(images => {
+        images.forEach(image => {
+          const imgElement = document.createElement('img');
+          imgElement.src = `/images/${image}`;
+          container.appendChild(imgElement);
+        });
+      })
+      .catch(error => console.error('Error:', error));
+  </script>
+
+  <script>
+    // Simple Node.js server code
+    const express = require('express');
+    const app = express();
+    const path = require('path');
+    const fs = require('fs');
+
+    app.use(express.static('images'));
+
+    app.get('/', (req, res) => {
+      res.sendFile(path.join(__dirname, 'index.html'));
+    });
+
+    app.get('/imagesList', (req, res) => {
+      fs.readdir('./images', (err, files) => {
+        if (err) {
+          console.error(err);
+          res.status(500).json({ error: 'Internal server error' });
+        } else {
+          const imageFiles = files.filter(file => /\.(jpg|jpeg|png|gif|svg)$/i.test(file));
+          res.json(imageFiles);
+        }
+      });
+    });
+
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}...`);
+    });
+  </script>
+</body>
+</html>
