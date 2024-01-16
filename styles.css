@@ -188,3 +188,13 @@ footer {
 .footer-social a:hover {
     color: #dad9d3; 
 } 
+
+.img {
+width: 30vw;
+padding: 10px;
+border-radius: 20px;
+margin: 10px;
+display: inline-block;
+
+
+}
