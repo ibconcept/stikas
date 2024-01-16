@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATATU-PSV</title>
+</head>
+<body> 
+    
+    <h1> MATATU-PSV</h1>
+    <h2>Registered-Matatu-Saccos, Routes and TLBs </h2>
+
+<button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
+
+<!-- Include the PDF file -->
+<embed id="pdfEmbed" src="registered-matatu-saccos.pdf" type="application/pdf" width="100%" height="600px" style="display:none">
+
+<script>
+    function downloadPDF() {
+        // Get the PDF embed element
+        var pdfEmbed = document.getElementById('pdfEmbed');
+
+        // Create an anchor element
+        var downloadLink = document.createElement('a');
+
+        // Set the download link's attributes
+        downloadLink.href = pdfEmbed.src;
+        downloadLink.download = 'registered-matatu-saccos.pdf';
+
+        // Append the link to the document and trigger a click event
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+
+        // Remove the link from the document
+        document.body.removeChild(downloadLink);
+    }
+</script>
+
+</body>
+</html>
