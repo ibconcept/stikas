@@ -28,6 +28,7 @@ text-align: center;
     font-weight: bold;
     display: inline-block;
     padding: 3px;
+    color: #dad9d3;
 }
 
 
@@ -37,6 +38,7 @@ text-align: center;
     border: 1px solid #ffee00;
     border-radius: 5px;
     margin: 10px;
+    color: #dad9d3;
 }
 
 .search-box {
@@ -118,21 +120,26 @@ text-align: center;
     width: 80%;  
     text-align: center;
     margin-left: 10%;
+    border-radius: 30px;
+    /* Box with shadow */
+box-shadow: 4px 4px 8px black;
+
+/* Small dotted yellow border */
+border: 1px dotted yellow;
+
+
 
 }
 
 
-div { 
-    
-    box-sizing: border-box; 
+div  { 
+
+     
     text-align: center; 
     display: flex;  
     align-items: center; 
-    justify-content: center;
-    padding: auto;
+    justify-content: center; 
     margin: 2px;
-
-
 
 } 
 
@@ -149,7 +156,8 @@ a {
     text-decoration: none;
     background-color: black;
     margin: 1%; 
-    padding: 3px;
+    padding-left: 20px; padding-right: 20px;
+    border-radius: 10px;
   }
    
 a:hover {
@@ -186,12 +194,18 @@ footer {
     color: #dad9d3; 
 } 
 
-.img {
-width: 30vw;
-padding: 10px;
-border-radius: 20px;
-margin: 10px;
-display: inline-block;
-overflow-x: hidden;
 
+
+/* .container {
+    box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
 }
+p .content {
+    max-width: 100%; /* Ensures content doesn't exceed the width of its container */
+     /* Makes the content take up the full width of its container */
+    /* padding: 10px; /* Adjust padding according to your design */
+    /* box-sizing: border-box; */
