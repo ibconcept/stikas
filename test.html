@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Display Images</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    figcaption {
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="container"></div>
+
+  <script>
+    // Function to fetch and display images
+    function displayImages() {
+      const container = document.getElementById('container');
+      fetch('/images') // Replace '/images' with the path to your folder or hosted location
+        .then(response => response.json())
+        .then(images => {
+          images.forEach(image => {
+            const img = document.createElement('img');
+            img.src = images/${image}; // Assuming the images folder is in the same directory as your HTML file
+            container.appendChild(img);
+
+            const figcaption = document.createElement('figcaption');
+            figcaption.textContent = image;
+            container.appendChild(figcaption);
+          });
+        })
+        .catch(error => console.error('Error fetching images:', error));
+    }
+
+    // Call the function to display images when the page loads
+    window.onload = displayImages;
+  </script>
+</body>
+</html>
