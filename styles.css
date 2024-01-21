@@ -136,7 +136,7 @@ a {
     transition: color 0.3s ease;
     text-decoration: none;
     background-color: black;
-    margin: 1%; 
+    margin: 10px; 
     padding-left: 20px; padding-right: 20px;
     border-radius: 10px;
   }
