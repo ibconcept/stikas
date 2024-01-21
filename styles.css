@@ -11,9 +11,8 @@ body {
     padding: 20px;
     background-color: black; 
     text-align: center;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
+    width: 100vw;  
+    display: flex; 
     justify-content: center;
 }
 
@@ -56,28 +55,6 @@ text-align: center;
     border: 1px solid #eeff01;
     border-radius: 5px;
     width: 200px;
-}
-
-@media (max-width: 768px) {
-
-    .photo {  
-        width: 50%;  
-    
-    }
-    .header span {
-        display: none;
-        margin: 10px;
-    }
-
-    .search-box {
-        display: block;
-        width: 30%;
-    }
-
-    .card {
-        flex: 0 0 calc(82% - 10px);
-    }
-
 }
 
 .card-container {
@@ -145,10 +122,10 @@ div  {
 } 
 
 button {
-  
-width: 300px;
-margin-top: 5%;
-
+   width: 50vw;
+background-color: yellow;
+border-radius: 10px;
+margin: 0 auto;
 }
 
 a {
@@ -210,3 +187,40 @@ p .content {
      /* Makes the content take up the full width of its container */
     /* padding: 10px; /* Adjust padding according to your design */
     /* box-sizing: border-box; */
+
+
+
+
+    
+@media (max-width: 768px) {
+
+    body {
+        font-size: 12px;
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        font-size: 1em;
+    }
+
+    .photo {  
+        width: 50%;  
+    
+    } 
+    .logo{
+        font-size: 2em;
+    }
+
+    .header span {
+        display: none;
+    }
+
+    .search-box {
+        display: block;
+        width: 30%;
+    }
+
+    .card {
+        flex: 0 0 calc(82% - 10px);
+    }
+
+}
