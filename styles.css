@@ -122,10 +122,13 @@ div  {
 } 
 
 button {
-   width: 50vw;
-background-color: yellow;
-border-radius: 10px;
-margin: 0 auto;
+    width: 50vw;
+    background-color: yellow;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 a {
