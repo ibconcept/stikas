@@ -33,7 +33,7 @@ text-align: center;
 
 
 .header span {
-    display: inline-block;
+    display: flex;
     padding: 10px;
     border: 1px solid #ffee00;
     border-radius: 5px;
@@ -49,13 +49,16 @@ text-align: center;
 }
 
 @media (max-width: 768px) {
+
+
     .header span {
-        display: block;
+        display: none;
         margin: 10px;
     }
 
     .search-box {
-        width: 50%;
+        display: block;
+        width: 30%;
     }
 
     .card {
@@ -115,19 +118,12 @@ text-align: center;
    
  
 .photo {
-
-    max-width: 100%; 
-    width: 80%;  
-    text-align: center;
-    margin-left: 10%;
-    border-radius: 30px;
-    /* Box with shadow */
-box-shadow: 4px 4px 8px black;
-
-/* Small dotted yellow border */
-border: 1px dotted yellow;
-
-
+    
+    display:block;
+margin: 0 auto;
+    width: 30%;  
+    justify-content: center;
+    text-align: center;    
 
 }
 
