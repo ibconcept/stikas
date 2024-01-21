@@ -20,7 +20,8 @@ body {
 
     display:block;
 margin: 0 auto;
-    width: 20%;     
+    width: 20%;   
+    border-radius: 10px;  
 
 }
 
@@ -110,17 +111,7 @@ text-align: center;
 
 
 
-div  { 
-
-     
-    text-align: center; 
-    display: flex;  
-    align-items: center; 
-    justify-content: center; 
-    margin: 2px;
-
-} 
-
+ 
 button {
     width: 50vw;
     background-color: yellow;
@@ -136,8 +127,11 @@ a {
     transition: color 0.3s ease;
     text-decoration: none;
     background-color: black;
+    display: flex;
+    flex-wrap: wrap; 
     margin: 10px; 
-    padding-left: 20px; padding-right: 20px;
+    padding: 10px; 
+    width: auto;
     border-radius: 10px;
   }
    
