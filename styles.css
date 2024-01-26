@@ -50,6 +50,12 @@ text-align: center;
     margin: 10px;
     color: #dad9d3;
 }
+.header   { 
+    padding: 10px;
+    border: 1px solid #ffee00;
+    border-radius: 5px; 
+    color: #dad9d3;
+}
 
 .search-box {
     padding: 10px;
@@ -110,17 +116,7 @@ text-align: center;
  
 
 
-
  
-button {
-    width: 50vw;
-    background-color: yellow;
-    border-radius: 10px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 a {
     color: #eeff01;   
@@ -170,23 +166,7 @@ footer {
     color: #dad9d3; 
 } 
 
-
-
-/* .container {
-    box-sizing: border-box;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 2px;
-}
-p .content {
-    max-width: 100%; /* Ensures content doesn't exceed the width of its container */
-     /* Makes the content take up the full width of its container */
-    /* padding: 10px; /* Adjust padding according to your design */
-    /* box-sizing: border-box; */
-
-
+ 
 
 
     
