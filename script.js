@@ -1,8 +1,14 @@
 const cardContainer = document.getElementById("cardContainer");
 const imageFilenames = [
-    "1", "2", "3", "4",
-    "5", "6", "7", "8",
-    "9", "10",  
+    "ford_ranger", 
+    "ford_ranger2", 
+    "xplode_alpine", 
+    "saved_by_grace",
+    "cross_fight_battle", 
+    "hoonigan",  
+    "TRD_fire",
+    "keep_silent", 
+    "Che_Guevara",  
     // Add more filenames here
 
 
