@@ -101,7 +101,7 @@
 <button id="downloadBtn" onclick="downloadPDF()">Download PDF</button>
 
 <!-- Include the PDF file -->
-<embed id="pdfEmbed" src="registered-matatu-saccos.pdf" type="application/pdf" width="100%" height="600px" style="display:none">
+<embed id="pdfEmbed" src="cutting plotter manual.pdf" type="application/pdf" width="100%" height="600px" style="display:none">
 
    
     <ul>
@@ -165,6 +165,78 @@
       <!-- Add more consumables -->
     </ul>
   </div>
+
+<p>
+  flow control and data integrity in serial communication:
+
+  RTS/CTS (Request to Send/Clear to Send):
+  
+  RTS (Request to Send): This control signal is sent by the data-sending device to inform the data-receiving device that it is ready to send data.
+  CTS (Clear to Send): This control signal is sent by the data-receiving device to indicate that it is ready to receive data.
+  In a flow-controlled communication setup, the sender will only transmit data if it receives a CTS signal from the receiver, ensuring that the receiver is ready to accept the data.
+  
+  XON/XOFF:
+  
+  XON (Transmitter On): This ASCII control character (Ctrl-Q) is sent by the receiver to the sender to resume data transmission.
+  XOFF (Transmitter Off): This ASCII control character (Ctrl-S) is sent by the receiver to the sender to temporarily stop data transmission.
+  XON/XOFF is a software-based flow control mechanism. When the receiver's buffer is nearing full, it sends an XOFF to the sender, signaling it to pause transmission. Once the receiver is ready to handle more data, it sends an XON to resume transmission.
+  
+  DTR/DSR (Data Terminal Ready/Data Set Ready):
+  
+  DTR (Data Terminal Ready): This control signal is sent by the data-sending device to indicate that it is ready to establish a connection.
+  DSR (Data Set Ready): This control signal is sent by the data-receiving device to indicate that it is ready to establish a connection.
+  DTR/DSR signals are often used to initiate and confirm the establishment of a serial communication link.
+  
+  Serial Data Checks:
+  
+  Parity (None, Even, Odd, Mark, Space):
+  None: No parity bit is used. Data is sent without any additional parity information.
+  Even: An even number of bits in the data word (including the parity bit) is set to ensure an even parity.
+  Odd: An odd number of bits in the data word is set to ensure an odd parity.
+  Mark: Parity bit is always set to 1.
+  Space: Parity bit is always set to 0.
+  Parity checking is a method to detect errors in transmitted data. The sender calculates and includes a parity bit, and the receiver checks whether the received data has the correct parity.
+  
+  Each of these control mechanisms and data checks plays a role in ensuring reliable and efficient serial communication between devices. The specific choice of these mechanisms depends on the requirements of the devices involved and the characteristics of the communication channel.
+
+
+</p>
+
+
+<p>
+  The optimal settings for a cutting plotter machine depend on the specifications of the machine and the requirements of the cutting task. Here are some general guidelines for setting up a cutting plotter machine:
+
+  Baud Rate:
+  
+  Set the baud rate (bits per second) to match the recommended or default baud rate of your cutting plotter. Common baud rates include 9600, 19200, or 38400 bps.
+  Data Bits, Stop Bits, and Parity:
+  
+  Typically, cutting plotters use 8 data bits, 1 stop bit, and no parity (8N1 configuration). However, it's essential to check the manufacturer's specifications for the recommended settings.
+  Flow Control:
+  
+  Flow control settings (RTS/CTS or XON/XOFF) are often not necessary for cutting plotters. Check the manufacturer's documentation to confirm if flow control is required.
+  Handshake Signals (DTR/DSR):
+  
+  Handshake signals like DTR and DSR may not be essential for cutting plotters. Consult the machine's documentation to determine if these signals need configuration.
+  Parity Check:
+  
+  Parity checking is typically disabled (None) for cutting plotters. Verify the manufacturer's recommendations to ensure proper configuration.
+  Line Endings:
+  
+  Confirm the line ending format required by the cutting plotter. Some machines may expect Windows-style line endings (Carriage Return + Line Feed), while others might need just a Carriage Return or Line Feed.
+  Tool Selection and Pen Settings:
+  
+  Depending on the cutting plotter, you may need to select the appropriate cutting tool or pen. Additionally, configure settings such as cutting force, speed, and offset according to the material you are cutting.
+  Communication Software:
+  
+  Use the software provided by the cutting plotter manufacturer or third-party software compatible with your machine. Ensure the software settings align with the communication parameters specified for your cutting plotter.
+  Test Cuts:
+  
+  Before starting a significant cutting job, perform test cuts on a scrap piece of material to ensure that the settings are correct. Adjust cutting force, speed, and other parameters as needed.
+  Always refer to the user manual or technical documentation provided by the cutting plotter manufacturer for specific settings tailored to your machine model. The recommended settings may vary, and using the correct configurations is crucial for achieving accurate and clean cuts.
+
+</p>
+
 <footer>
 
 
