@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" type="text/css" href="styles2.css">
+     
     <title>Document</title>
 
 
@@ -78,7 +77,14 @@
     <!-- Facebook Open Graph Type -->
     <meta property="og:type" content="website">
   
-
+<style>
+  .quote{
+    background-color: #fceb06;
+    margin: 2%;
+    font-weight: 700;
+    width: auto;
+  }
+</style>
 
 
 
@@ -88,7 +94,6 @@
 
      
 <header>
-    <p style="text-align: center;"> <h1> Quotes for a day</h1></p>
   </header>
   
     
@@ -108,33 +113,33 @@
       
   <br>
   
-  <div class="quoteContainer"></div>
+  <div class="quoteContainer" style=" text-align: center; ;"> </div>
   
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const quoteContainer = document.querySelector('.quoteContainer');
   // Creating quotes dynamically in JavaScript
 const quotes = [
-    { type: 'philosophical', author: 'Rumi', text: 'The wound is the place where the light enters you.' },
-    { type: 'philosophical', author: 'Confucius', text: 'It does not matter how slowly you go as long as you do not stop.' },
-    { type: 'inspirational', author: 'Mahatma Gandhi', text: 'Be the change that you wish to see in the world.' },
-    { type: 'philosophical', author: 'Aristotle', text: 'Knowing yourself is the beginning of all wisdom.' },
-    { type: 'philosophical', author: 'Socrates', text: 'An unexamined life is not worth living.' },
-    { type: 'inspirational', author: 'Rumi', text: 'Don’t be satisfied with stories, how things have gone with others. Unfold your own myth.' },
-    { type: 'philosophical', author: 'Confucius', text: 'Our greatest glory is not in never falling, but in rising every time we fall.' },
-    { type: 'inspirational', author: 'Mahatma Gandhi', text: 'Live as if you were to die tomorrow. Learn as if you were to live forever.' },
-    { type: 'philosophical', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
-    { type: 'philosophical', author: 'Socrates', text: 'The only true wisdom is in knowing you know nothing.' },
-    { type: 'inspirational', author: 'Rumi', text: 'You were born with wings, why prefer to crawl through life?' },
-    { type: 'philosophical', author: 'Confucius', text: 'It is not the man who has too little, but the man who craves more, that is poor.' },
-    { type: 'inspirational', author: 'Mahatma Gandhi', text: 'First, they ignore you, then they laugh at you, then they fight you, then you win.' },
-    { type: 'philosophical', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
-    { type: 'philosophical', author: 'Socrates', text: 'True knowledge exists in knowing that you know nothing.' },
-    { type: 'inspirational', author: 'Rumi', text: 'What you seek is seeking you.' },
-    { type: 'philosophical', author: 'Confucius', text: 'Wheresoever you go, go with all your heart.' },
-    { type: 'inspirational', author: 'Mahatma Gandhi', text: 'The best way to find yourself is to lose yourself in the service of others.' },
-    { type: 'philosophical', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
-    { type: 'philosophical', author: 'Socrates', text: 'I am not an Athenian or a Greek, but a citizen of the world.' },
+    { type: 'Q', author: 'Rumi', text: 'The wound is the place where the light enters you.' },
+    { type: 'Q', author: 'Confucius', text: 'It does not matter how slowly you go as long as you do not stop.' },
+    { type: 'I', author: 'Mahatma Gandhi', text: 'Be the change that you wish to see in the world.' },
+    { type: 'Q', author: 'Aristotle', text: 'Knowing yourself is the beginning of all wisdom.' },
+    { type: 'Q', author: 'Socrates', text: 'An unexamined life is not worth living.' },
+    { type: 'I', author: 'Rumi', text: 'Don’t be satisfied with stories, how things have gone with others. Unfold your own myth.' },
+    { type: 'Q', author: 'Confucius', text: 'Our greatest glory is not in never falling, but in rising every time we fall.' },
+    { type: 'I', author: 'Mahatma Gandhi', text: 'Live as if you were to die tomorrow. Learn as if you were to live forever.' },
+    { type: 'Q', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
+    { type: 'Q', author: 'Socrates', text: 'The only true wisdom is in knowing you know nothing.' },
+    { type: 'I', author: 'Rumi', text: 'You were born with wings, why prefer to crawl through life?' },
+    { type: 'Q', author: 'Confucius', text: 'It is not the man who has too little, but the man who craves more, that is poor.' },
+    { type: 'I', author: 'Mahatma Gandhi', text: 'First, they ignore you, then they laugh at you, then they fight you, then you win.' },
+    { type: 'Q', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
+    { type: 'Q', author: 'Socrates', text: 'True knowledge exists in knowing that you know nothing.' },
+    { type: 'I', author: 'Rumi', text: 'What you seek is seeking you.' },
+    { type: 'Q', author: 'Confucius', text: 'Wheresoever you go, go with all your heart.' },
+    { type: 'I', author: 'Mahatma Gandhi', text: 'The best way to find yourself is to lose yourself in the service of others.' },
+    { type: 'Q', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
+    { type: 'Q', author: 'Socrates', text: 'I am not an Athenian or a Greek, but a citizen of the world.' },
 ];
 
   
