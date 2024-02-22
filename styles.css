@@ -128,8 +128,7 @@ a {
     text-decoration: none;
     background-color: black;
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center;
+    flex-wrap: wrap;  
     margin: 3px; 
     padding: 10px;   
     box-sizing: content-box;
