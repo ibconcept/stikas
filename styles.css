@@ -130,6 +130,7 @@ a {
     display: flex;
     flex-wrap: wrap;  
     margin: 3px; 
+    justify-content: center;
     padding: 10px;   
     box-sizing: content-box;
     border-radius: 10px;
