@@ -133,8 +133,7 @@ a {
     flex-wrap: wrap;  
     margin: 3px; 
     justify-content: center;
-    padding: 10px;  
-    box-sizing: content-box;
+    padding: 10px;   
     border-radius: 10px;
     text-align: center;
   }
