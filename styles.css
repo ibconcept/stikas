@@ -134,7 +134,7 @@ a {
     margin: 3px; 
     justify-content: center;
     padding: 10px;  
-    box-sizing: border-box;
+    box-sizing: content-box;
     border-radius: 10px;
     text-align: center;
   }
