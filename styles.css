@@ -5,7 +5,7 @@ body {
     overflow-x: hidden;
    background: linear-gradient(to bottom, hsl(54, 100%, 86%), rgb(253, 255, 153)); 
 
-
+text-align: center;
    
 }
 
@@ -134,7 +134,7 @@ a {
     margin: 3px; 
     justify-content: center;
     padding: 10px;  
-    box-sizing: content-box;
+    box-sizing: border-box;
     border-radius: 10px;
     text-align: center;
   }
@@ -143,17 +143,11 @@ a {
 a:hover {
     color: red;
 }
- 
-
-footer {
-    color: #ffd700;
-     display: flex;
-    
-}
+  
 
 .footer-content { 
-   display: inline-block; 
-    align-items: center; 
+    margin: 0 auto;
+   text-align: center;
     text-decoration: none;
     
 }
