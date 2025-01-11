@@ -59,7 +59,7 @@
   <title>stikas</title>
   
 <!-- Facebook Meta Tags -->
-  <meta property="og:url" content="https://www.stikas.xyz"> <!-- Your website URL -->
+  <meta property="og:url" content="https://www.stikas.vip"> <!-- Your website URL -->
   <meta property="og:site_name" content="stikas"> <!-- Your website name -->
   <meta property="fb:app_id" content="stikas"> <!-- Your Facebook App ID (if applicable) -->
 
@@ -70,7 +70,7 @@
   <meta property="article:publisher" content="https://www.facebook.com/stikas">
 
   <!-- Facebook Open Graph Image -->
-  <meta property="og:image" content="https://www.stikas.xyz">
+  <meta property="og:image" content="https://www.stikas.vip">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
@@ -106,8 +106,63 @@
   </div>
  
   <main>
-  <p><img src="photo.PNG" alt="matatu culture" class="photo"></p>
-  
+
+
+
+
+    <section class="hero-container">
+      <div class="hero">
+        <div class="hero-carousel">
+          <div class="hero-slide">
+            <img src="matatu.PNG" alt="LED Car Lights">
+            <div class="hero-caption">
+              <h2>LED Car Lights tints</h2>
+              <p>Brighten your ride with premium LED lights. KSh 1,500</p>
+            </div>
+          </div>
+          <div class="hero-slide">
+            <img src="matatu.PNG" alt="Custom Car Mats">
+            <div class="hero-caption">
+              <h2>matatu.PNG</h2>
+              <p>Keep your car interior neat and stylish. KSh 2,500</p>
+            </div>
+          </div>
+          <div class="hero-slide">
+            <img src="matatu.PNG" alt="Car Window Tints">
+            <div class="hero-caption">
+              <h2>Car Window Tints</h2>
+              <p>Improve privacy and UV protection. KSh 3,000</p>
+            </div>
+          </div>
+        </div>
+        <div class="cta-button">
+          <button>Shop Now</button>
+        </div>
+      </div>
+    </section>
+
+
+<!-- slide srcipt -->
+
+    <script>
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.hero-slide');
+      
+      function showSlide(index) {
+          slides.forEach((slide, idx) => {
+              slide.style.transform = `translateX(${30 * (idx - index)}%)`;
+          });
+      }
+      
+      setInterval(() => {
+          currentIndex = (currentIndex + 1) % slides.length;
+          showSlide(currentIndex);
+      }, 3000); // Slides every 3 seconds
+    </script>
+
+
+
+
 
 
    
@@ -157,24 +212,16 @@
   <h1  style="text-align: center;">Now FIND all generic vehicle brands stickers designs type!!
     <br> //Cars to Trucks to//SUVs-Off-road/ typa of Stikas <br>
     Subaru/ Toyota/ Nissan/ Mazda/ Jeep/ BMW </h1>
-
-    <!-- <div class="slides">
-      <img src="image1.jpeg" class="img" />
-      <img src="image2.jpg" class="img" />
-      <img src="image3.jpg" class="img" />
-      <img src="image4.jpg" class="img" />
-      <img src="image5.jpg" class="img" />
-      <img src="image6.jpg" class="img" />
-      <img src="image7.jpg" class="img" />
-      <img src="image8.jpg" class="img" />
-      <img src="image9.png" class="img" />
-      
-    </div> -->
+ 
 
 
-    <br>
     <p><img src="photo2.PNG" alt="matatu culture" class="photo" style="width: 80vw;"></p>
 
+
+
+
+
+    
     <h1  style="text-align: center;">New 
       Logos & more... ! Bumperstickers Designs/ Matatu Culture Designs! <br>
       / Rear /Arabic / Fun / Laptop Stickers Designs / Verses & Crazy Quotes !! </h1>
@@ -201,60 +248,75 @@
    
  <button>to download just select and save as svg</button>
 
+
+
+ 
   
   <div class="card-container" id="cardContainer">
     <!-- JavaScript will populate the cards here -->
   </div>
 
+
+  
+  <footer>
+    <div class="footer-content">
+      <div class="social-links">
+        <a href="https://www.ibconcept.vip" target="_blank" class="social-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.ibconcept.vip" target="_blank" class="social-icon">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.ibconcept.vip" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+  
+      <div class="contact-actions">
+        <a href="https://api.whatsapp.com/send?phone=254719301330" class="contact-link">
+          <button id="getQuoteButton">Talk on WhatsApp!</button>
+        </a>
+      </div>
+  
+      <div class="footer-text">
+        <p>Site designed and developed by <a href="https://www.ibconcept.vip" target="_blank">ibconcept.vip</a></p>
+        <p>Nairobi, Ngara Quarry Road</p>
+        <p>&copy; 2020, ibconcept_Design_Agency</p>
+        <p>Email: <a href="mailto:info@ibconcept.vip">info@ibconcept.vip</a></p>
+        <p>Phone: <a href="https://api.whatsapp.com/send?phone=254719301330">+254 719 301 330</a></p>
+      </div>
+  
+      <div class="footer-navigation">
+        <a href="index.html" class="footer-nav-link"><img src="favicon-32x32.png" alt="Logo Meme Stikas"></a>
+        <a href="vinyl-cutting.html" class="footer-nav-link">Get help from our vinyl cutting experts</a>
+        <a href="forum.html" class="footer-nav-link">Join our forum</a>
+        <a href="about.html" class="footer-nav-link">About</a>
+      </div>
+    </div>
+  </footer>
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!-- <div id="pagination"></div> -->
   <!-- <script src="slide.js"></script> -->
   
   <script src="script.js"></script>
 
-
-<!-- 
-
-
-
-
-  <footer>
-    
-    <div class="footer-content">
-       
-        <a href="https://www.ibconcept.xyz" target="_blank">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.ibconcept.xyz" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="https://www.ibconcept.xyz" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      
-
-       <a href="https://api.whatsapp.com/send?phone=254719301330">
-        <button id="getQuoteButton">Talk on whatsapp!</button>
-        </a>  
-
-       
-        <p>Site designed and developed by <a href="https://www.ibconcept.xyz" target="_blank">ibconcept.xyz</a></p>
-        <p>Nairobi, Ngara Quarry Road</p>
-        <p>&copy; 2020, ibconcept_Design_Agency</p>
-        <p>Email: <a href="mailto:info@ibconcept.xyz">info@ibconcept.xyz</a></p>
-        <p>Email: <a href="https://api.whatsapp.com/send?phone=254719301330">tel:+254 719 301 330</a></p>
-      </div>
-    
  
-
-
-
-  
-  <a href="index.html"><img src="favicon-32x32.png" alt=" logo meme stikas"> </a>
-  <a href="vinyl-cutting.html"> Get help from our vinyl cutting experts</a>
-  <a href="forum.html"> Join our forum </a>
-  <a href="about.html"> About </a>
-
-  </footer>
- -->
 
 
 </body>

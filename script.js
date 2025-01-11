@@ -50,26 +50,11 @@ const imageFilenames = [
     "parental_adivsory_vector_logo",
     "puma_vector_logo",
     "classic_hiphop_vector_logo",
+    "classic_hiphop_vector_logo",
    
-
-
-
-
-    
     // Add more filenames here
 
-
-
-
-
-
-
-
-
-
-
-
-    
+   
 ];
 
 function getRandomImageFilename() {
@@ -97,3 +82,4 @@ for (let i = 0; i < numberOfCards; i++) {
 
     cardContainer.appendChild(card);
 }
+
