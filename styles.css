@@ -1,13 +1,14 @@
 :root {
-    --primary-color: hsl(42, 90%, 90%);
-    --secondary-color: hsl(172, 36%, 70%);
-    --accent-color: hsl(182, 72%, 83%);
-    --background-color: hsl(6, 55%, 80%);
-    --text-color: hsl(9, 100%, 99%);
+    --background-color: hsl(308, 100%, 92%); /* #d9b69f - Light background */
+    --text-color: hsl(0, 100%, 15%); /* #4b0000 - Dark text */
+    --accent-color: hsl(24, 49%, 48%); /* #941522 - Accent elements */
+    --secondary-color: hsl(59, 100%, 72%); /* #d38c2b - Buttons or highlights */
+    --primary-color: hsl(352, 92%, 57%); /* #fc2544 - Standout elements */
 }
 
+
 body {
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
     font-family: 'Montserrat', sans-serif;
     
     margin: 0 auto;
@@ -21,11 +22,10 @@ body {
 }
 
 .header {
-    padding: 2em;
+    padding: 1em;
     background-color: var(--secondary-color);
     text-align: center;
-    width: 90vw;
-    border-radius: 0.5em;
+    width: 100vw;
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
@@ -57,6 +57,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 1em;
+    margin: 0 auto;
+    width: 80vw;
     justify-content: center;
     gap: 1em;
 }
@@ -74,10 +76,15 @@ body {
 }
 
 .card img {
-    width: 80%;
+    width: auto;
     padding: 0.2em;
     object-fit: cover;
     border-radius: 0.5em;
+}
+
+img {
+    border-radius: 1em;
+
 }
 
 .card figcaption {
@@ -193,7 +200,6 @@ footer {
 .hero-slide img {
     width: 50%;
     height: auto;
-    max-height: 70vh;
     border-radius: 15px;
     object-fit: cover;
     /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); */
@@ -241,7 +247,9 @@ footer {
 }
 
 
-
+li {
+    list-style-type: none;
+}
 
 footer {
     padding: 2em;
