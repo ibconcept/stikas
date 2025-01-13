@@ -1,7 +1,7 @@
 :root {
     --background-color: hsl(308, 100%, 92%); /* #d9b69f - Light background */
     --text-color: hsl(0, 100%, 15%); /* #4b0000 - Dark text */
-    --accent-color: hsl(24, 49%, 48%); /* #941522 - Accent elements */
+    --accent-color: hsl(56, 100%, 88%); /* #941522 - Accent elements */
     --secondary-color: hsl(59, 100%, 72%); /* #d38c2b - Buttons or highlights */
     --primary-color: hsl(352, 92%, 57%); /* #fc2544 - Standout elements */
 }
