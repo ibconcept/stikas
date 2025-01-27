@@ -1,0 +1,12 @@
+<rss version="2.0">
+  <channel>
+    <title>Stikas RSS Feed</title>
+    <link>https://stikas.xyz/</link>
+    <item>
+      <title>New Post</title>
+      <link>https://stikas.xyz/new-post</link>
+      <pubDate>Sat, 25 Jan 2025 12:00:00 GMT</pubDate>
+      <description>New post on the website.</description>
+    </item>
+  </channel>
+</rss>
