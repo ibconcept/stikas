@@ -212,25 +212,29 @@
       / Rear /Arabic / Fun / Laptop Stickers Designs / Verses & Crazy Quotes !! </h1>
 
 
-
-
-      <div style="width: 50vw; margin: 0 auto; background-color: rgba(255, 255, 255, 0.5); padding: 20px; border-radius: 8px; height: auto; text-align: right; display: flex; align-items: flex-start;">
-        <img src="toon.png" alt="toon with a sticker" style="margin-right: 3em; width: 21em; height: auto; display: block;">
-        <span>
-            <h1 style="color: #333;">#stikas.xyz - Order Process</h1>
-            <p style="color: #555; margin-bottom: 15px;">Follow these steps to order stickers from our collection:</p>
-    
-            <ol style="list-style-type: square; color: #555; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">Choose a sticker from our collection.</li>
-                <li style="margin-bottom: 10px;">Provide necessary details for your order.</li>
-                <li style="margin-bottom: 10px;">Get price and other information.</li>
-                <li style="margin-bottom: 10px;">Make payment.</li>
-                <li style="margin-bottom: 10px;">Relax as we deliver your order within the country.</li>
-                <li style="margin-bottom: 10px; color: red;"><b>You can click the talk on WhatsApp for more inquiries.</b></li>
+      <div class="order-process">
+        <img src="toon.png" alt="toon with a sticker" class="order-image">
+        <span class="order-details">
+            <h1>#stikas.xyz - Order Process</h1>
+            <p>Follow these steps to order stickers from our collection:</p>
+            <ol class="order-steps">
+                <li>Choose a sticker from our collection.</li>
+                <li>Provide necessary details for your order.</li>
+                <li>Get price and other information.</li>
+                <li>Make payment.</li>
+                <li>Relax as we deliver your order within the country.</li>
+                <li class="important-step"><b>You can click the talk on WhatsApp for more inquiries.</b></li>
             </ol>
         </span>
     </div>
     
+
+
+     
+    
+
+
+
 
 
 
@@ -324,30 +328,16 @@
 
 
   <!-- <div id="pagination"></div> -->
-  <!-- <script src="slide.js"></script> -->
+
+
+
+  <script src="slide.js"></script>
   
   <script src="script-images.js"></script>
 
  
 
 <!-- slide srcipt -->
-
-<script>
-  let currentIndex = 0;
-  const slides = document.querySelectorAll('.hero-slide');
-  
-  function showSlide(index) {
-      slides.forEach((slide, idx) => {
-          slide.style.transform = `translateX(${30 * (idx - index)}%)`;
-      });
-  }
-  
-  setInterval(() => {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex);
-  }, 3000); // Slides every 3 seconds
-</script>
-
 
 
 
