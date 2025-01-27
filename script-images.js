@@ -1,4 +1,4 @@
-//script-images.js
+// script-images.js
 
 const cardContainer = document.getElementById("cardContainer");
 const imageFilenames = [
@@ -53,10 +53,6 @@ const imageFilenames = [
     "puma_vector_logo",
     "classic_hiphop_vector_logo",
     "classic_hiphop_vector_logo"
-   
-    // Add more filenames here
-
-   
 ];
 
 function getRandomImageFilename() {
@@ -79,9 +75,11 @@ for (let i = 0; i < numberOfCards; i++) {
     caption.textContent = imageFilename;
 
     card.appendChild(image);
-
     card.appendChild(caption);
-
     cardContainer.appendChild(card);
 }
 
+// Import pagination script (ensure the script is in your HTML file)
+const script = document.createElement("script");
+script.src = "script-pagination.js";
+document.head.appendChild(script);
