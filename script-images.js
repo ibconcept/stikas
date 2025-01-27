@@ -1,3 +1,5 @@
+//script-images.js
+
 const cardContainer = document.getElementById("cardContainer");
 const imageFilenames = [
     "ford_ranger", 

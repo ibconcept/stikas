@@ -75,12 +75,15 @@ body {
     transition: transform 0.4s ease, background-color 0.4s ease;
 }
 
+
 .card img {
-    width: auto;
+    
+    object-fit: contain; /* Preserve aspect ratio */
     padding: 0.2em;
-    object-fit: cover;
     border-radius: 0.5em;
 }
+
+
 
 img {
     border-radius: 1em;
