@@ -130,6 +130,7 @@ a:hover {
 
 footer {
     display: flex;
+    width: 100%;
     justify-content: center;
     padding: 1em;
     background-color: var(--secondary-color);
@@ -263,7 +264,13 @@ li {
 
 
 
+.card2 {
+display: flex;
+content: inherit;
+gap: 3em; 
+box-shadow: 1px 1px 2px 0 #000;
 
+}
 
 
 /* General Styles */
@@ -377,23 +384,25 @@ footer {
 
   /* Order Process Container */
 .order-process {
-    width: 50vw;
-    margin: 0 auto;
+    width: 40vw;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 20px;
+    padding: 3em;
     border-radius: 8px;
-    height: auto;
+    height: 20em;
     text-align: right;
     display: flex;
+    object-fit: contain;
+margin: 0 auto;
     align-items: flex-start;
+    margin-bottom: 2em;
 }
 
 /* Image Style */
 .order-image {
     margin-right: 3em;
-    width: 21em;
-    height: auto;
+    width: 10vw; 
     display: block;
+    align-self: center;
 }
 
 /* Text Styling */
