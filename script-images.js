@@ -47,6 +47,7 @@ const imageFilenames = [
     "80_psv_vector_design6",
     "80_kph_vector_design6",
     "80_kph_vector_design7",
+    "lady-on-glass-kaskie-vibaya-na-huko-vector-logo",
     "80_psv_vector_design7", 
     "by_his_grace",
     "parental_adivsory_vector_logo",
