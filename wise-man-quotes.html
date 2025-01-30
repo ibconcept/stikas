@@ -80,9 +80,11 @@
 <style>
   .quote{
     background-color: #fceb06;
-    margin: 2%;
+    margin: 0 auto;
+    margin-bottom: 1em;
     font-weight: 700;
-    width: auto;
+    padding: 3em;
+    width: 50vw;
   }
 </style>
 
@@ -120,26 +122,27 @@
       const quoteContainer = document.querySelector('.quoteContainer');
   // Creating quotes dynamically in JavaScript
 const quotes = [
-    { type: 'Q', author: 'Rumi', text: 'The wound is the place where the light enters you.' },
-    { type: 'Q', author: 'Confucius', text: 'It does not matter how slowly you go as long as you do not stop.' },
-    { type: 'I', author: 'Mahatma Gandhi', text: 'Be the change that you wish to see in the world.' },
-    { type: 'Q', author: 'Aristotle', text: 'Knowing yourself is the beginning of all wisdom.' },
-    { type: 'Q', author: 'Socrates', text: 'An unexamined life is not worth living.' },
-    { type: 'I', author: 'Rumi', text: 'Don’t be satisfied with stories, how things have gone with others. Unfold your own myth.' },
-    { type: 'Q', author: 'Confucius', text: 'Our greatest glory is not in never falling, but in rising every time we fall.' },
-    { type: 'I', author: 'Mahatma Gandhi', text: 'Live as if you were to die tomorrow. Learn as if you were to live forever.' },
-    { type: 'Q', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
-    { type: 'Q', author: 'Socrates', text: 'The only true wisdom is in knowing you know nothing.' },
-    { type: 'I', author: 'Rumi', text: 'You were born with wings, why prefer to crawl through life?' },
-    { type: 'Q', author: 'Confucius', text: 'It is not the man who has too little, but the man who craves more, that is poor.' },
-    { type: 'I', author: 'Mahatma Gandhi', text: 'First, they ignore you, then they laugh at you, then they fight you, then you win.' },
-    { type: 'Q', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
-    { type: 'Q', author: 'Socrates', text: 'True knowledge exists in knowing that you know nothing.' },
-    { type: 'I', author: 'Rumi', text: 'What you seek is seeking you.' },
-    { type: 'Q', author: 'Confucius', text: 'Wheresoever you go, go with all your heart.' },
-    { type: 'I', author: 'Mahatma Gandhi', text: 'The best way to find yourself is to lose yourself in the service of others.' },
-    { type: 'Q', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
-    { type: 'Q', author: 'Socrates', text: 'I am not an Athenian or a Greek, but a citizen of the world.' },
+    { type: 'Rumi', author: 'Rumi', text: 'The wound is the place where the light enters you.' },
+    { type: 'Confucius', author: 'Confucius', text: 'It does not matter how slowly you go as long as you do not stop.' },
+    { type: 'Mahatma Gandhi', author: 'Mahatma Gandhi', text: 'Be the change that you wish to see in the world.' },
+    { type: 'Aristotle', author: 'Aristotle', text: 'Knowing yourself is the beginning of all wisdom.' },
+    { type: 'Socrates', author: 'Socrates', text: 'An unexamined life is not worth living.' },
+    { type: 'Rumi', author: 'Rumi', text: 'Don’t be satisfied with stories, how things have gone with others. Unfold your own myth.' },
+    { type: 'Confucius', author: 'Confucius', text: 'Our greatest glory is not in never falling, but in rising every time we fall.' },
+    { type: 'Mahatma Gandhi', author: 'Mahatma Gandhi', text: 'Live as if you were to die tomorrow. Learn as if you were to live forever.' },
+    { type: 'Aristotle', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
+    { type: 'Socrates', author: 'Socrates', text: 'The only true wisdom is in knowing you know nothing.' },
+    { type: 'Rumi', author: 'Rumi', text: 'You were born with wings, why prefer to crawl through life?' },
+    { type: 'Confucius', author: 'Confucius', text: 'It is not the man who has too little, but the man who craves more, that is poor.' },
+    { type: 'Mahatma Gandhi', author: 'Mahatma Gandhi', text: 'First, they ignore you, then they laugh at you, then they fight you, then you win.' },
+    { type: 'Aristotle', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
+    { type: 'Rumi', author: 'Rumi', text: 'True knowledge exists in knowing that you know nothing.' },
+    { type: 'Rumi', author: 'Rumi', text: 'What you seek is seeking you.' },
+    { type: 'Confucius', author: 'Confucius', text: 'Wheresoever you go, go with all your heart.' },
+    { type: ' Mahatma Gandhi', author: 'Mahatma Gandhi', text: 'The best way to find yourself is to lose yourself in the service of others.' },
+    { type: ' Aristotle', author: 'Aristotle', text: 'The more you know, the more you realize you don’t know.' },
+    { type: 'Socrates', author: 'Socrates', text: 'I am not an Athenian or a Greek, but a citizen of the world.' },
+
 ];
 
   
