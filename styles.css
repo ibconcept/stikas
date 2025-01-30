@@ -50,7 +50,7 @@ body {
     padding: 0.5em;
     border: 0.1em solid var(--primary-color);
     border-radius: 0.25em;
-    width: 15em;
+    width: 2em;
 }
 
 .card-container {
@@ -462,7 +462,11 @@ margin: 0 auto;
         padding: 1rem;
         gap: 1rem;
     }
-
+h1, h2{
+    font-size: 1.2em;
+    width: 80vw;
+    margin: auto;
+}
     .order-image {
         width: 100%;
         margin: 0 auto;
@@ -528,7 +532,7 @@ margin: 0 auto;
     }
 
     .search-box {
-        width: 80%;
-        margin-top: 1em;
+        width: 80vw;
+        color: red;
     }
 }
