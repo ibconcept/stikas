@@ -72,7 +72,35 @@ const imageFilenames = [
     "parental_adivsory_vector_logo",
     "puma_vector_logo",
     "made_in_kanairo_barcode_vector_logo",
-    "classic_hiphop_vector_logo"
+    "classic_hiphop_vector_logo",
+    "b_bleesed_gospel_logo_design",
+    "california_logo_image",
+    "cross_on_flame_vector_design",
+    "decorated_binding_lines_logo_design",
+    "drive_it_like_you_stole_it_logo_design",
+    "gospel's_clear_than_clarity_gospel_vector_design",
+    "his_mercies_are_sufficient_gospel_logo_design",
+    "its_your_prayer_gospel_logo_design",
+    "lets_all_get_a_bong",
+    "new_anguka_nayo_logo_design",
+    "nganja_head_logo_design",
+    "nganya_infinity_logo_design",
+    "only_one_king_vector_image",
+    "rock_of_ages_vector_design",
+    "shoot_on_sight_logo_design",
+    "slay_logo_design"
+
+
+
+
+
+
+
+
+
+
+
+
 ];
 
 function getRandomImageFilename() {
