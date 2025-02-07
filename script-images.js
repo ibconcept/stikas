@@ -86,7 +86,6 @@ const imageFilenames = [
     "nganja_head_logo_design",
     "nganya_infinity_logo_design",
     "only_one_king_vector_image",
-    "rock_of_ages_vector_design",
     "shoot_on_sight_logo_design",
     "slay_logo_design"
 

@@ -7,6 +7,20 @@ matwana culture
 matatu galore
 mombasa matatu culture
 
+
+//////////SEO//////
+seo
+Tools like SVGO or SVGOMG can help remove unnecessary data and improve performance.
+
+However, if you have many SVG images, consider dynamically generating the sitemap through a script or CMS that can automatically include all the SVG file paths for you.
+<svg>
+  <title>Descriptive Image Title</title>
+  <desc>Detailed description of the image for SEO and accessibility.</desc>
+  <!-- Image content -->
+</svg>
+
+
+
 subaru boyz 
 jdm team
 jeep kenya
