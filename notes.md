@@ -6,6 +6,7 @@ sticker hubs
 matwana culture 
 matatu galore
 mombasa matatu culture
+chcek out site map for images.xml for seo for every image.
 
 
 //////////SEO//////
