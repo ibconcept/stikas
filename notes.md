@@ -3,7 +3,16 @@
 pick up culture
 matatu culture
 sticker hubs 
-matwana culture 
+matwana cultures
+we need to some or like some ,,//// expertise on GIF  // WE NEED EXPERTISSE ON GIF ,, ..
+
+isuzu stickers
+frr fvz
+ 
+
+ boxer bike logo etc  /// ... //
+
+ 
 matatu galore
 mombasa matatu culture
 chcek out site map for images.xml for seo for every image.
