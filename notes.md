@@ -8,7 +8,8 @@ we need to some or like some ,,//// expertise on GIF  // WE NEED EXPERTISSE ON G
 
 isuzu stickers
 frr fvz
- 
+ https://www.youtube.com/watch?v=_kXJZAMYYzM
+ martin ojiambo ,  cliff -- hyperrealism realiam photorealism types of art , abstract patterns seamless , murals glass  etc,,
 
  boxer bike logo etc  /// ... //
 
