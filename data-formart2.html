@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>How to Manage Scraped Data in a Simple SSR App</h1>
+    
+    <h2>1️⃣ Choose a Data Format for Storage</h2>
+    <ul>
+        <li><strong>JSON</strong> – For APIs or NoSQL databases.</li>
+        <li><strong>CSV</strong> – For tabular data.</li>
+        <li><strong>SQL</strong> – For relational data.</li>
+        <li><strong>NoSQL</strong> – For flexible data structures.</li>
+    </ul>
+    
+    <h2>2️⃣ Recommended Data Structure</h2>
+    <h3>📁 JSON / NoSQL (MongoDB, Firebase)</h3>
+    <pre><code>{
+  "products": [
+    {
+      "id": "prd_001",
+      "name": "Smartphone XYZ",
+      "category": "Electronics",
+      "price": 199.99,
+      "supplier": {
+        "name": "Shenzhen Tech Co.",
+        "contact": "supplier@example.com"
+      },
+      "stock": 50,
+      "rating": 4.5,
+      "importDate": "2025-03-01T10:00:00Z"
+    }
+  ]
+}</code></pre>
+    
+    <h3>📊 Relational Database (SQL - MySQL, PostgreSQL)</h3>
+    <pre><code>CREATE TABLE products (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    category VARCHAR(100),
+    price DECIMAL(10,2),
+    supplier_id INT,
+    stock INT,
+    rating FLOAT,
+    import_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (supplier_id) REFERENCES suppliers(id)
+);
+
+CREATE TABLE suppliers (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    contact VARCHAR(255)
+);</code></pre>
+    
+    <h2>3️⃣ Handling Data in the Backend</h2>
+    <ul>
+        <li><strong>Fetching Data</strong> → Use an API to pull new data periodically.</li>
+        <li><strong>Cleaning & Normalizing</strong> → Ensure data consistency.</li>
+        <li><strong>Storing Efficiently</strong> → SQL for structured, NoSQL for flexible storage.</li>
+        <li><strong>Serving via SSR</strong> → Fetch from DB and render on Next.js/Nuxt.js/Express.js.</li>
+    </ul>
+    
+    <h2>4️⃣ Data Processing Flow</h2>
+    <ol>
+        <li>Scrape & Fetch → Data is fetched from the source.</li>
+        <li>Validate & Clean → Remove duplicates, incorrect values.</li>
+        <li>Store → Insert into SQL/NoSQL databases.</li>
+        <li>Serve → API endpoints for SSR apps.</li>
+        <li>Update & Archive → Older data can be archived in CSV/JSON.</li>
+    </ol>
+    
+    <h2>5️⃣ Best Practices</h2>
+    <ul>
+        <li>Use <strong>cron jobs</strong> to schedule updates.</li>
+        <li>Normalize data in <strong>SQL databases</strong> for efficiency.</li>
+        <li>Use <strong>Redis/Memcached</strong> for caching.</li>
+        <li>Store backups in <strong>CSV/JSON format</strong>.</li>
+    </ul>
+    
+    <h2>Which One Should You Use?</h2>
+    <ul>
+        <li>Use <strong>SQL</strong> if data has strong relationships.</li>
+        <li>Use <strong>NoSQL</strong> if data is flexible.</li>
+        <li>Use <strong>JSON/CSV</strong> for backups and exporting reports.</li>
+    </ul>
+    
+    <p>Let me know if you need a sample implementation! 🚀</p>
+</body>
+</html>
