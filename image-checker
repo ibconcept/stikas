@@ -45,3 +45,2447 @@ if [ ${#only_in_images[@]} -gt 0 ]; then
 else
     echo "No images are exclusive to the images folder."
 fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
+#!/bin/bash
+
+# Path to the script and images directory
+JS_FILE="script-images.js"
+IMAGES_DIR="images"
+
+# Extract image filenames (without extensions) from the JS file
+js_images=$(grep -oP '"\K[^"]+' "$JS_FILE" | sed 's/[^a-zA-Z0-9_-]//g')
+
+# Get the list of SVG images (without extensions) from the images directory
+image_files=$(find "$IMAGES_DIR" -type f -name "*.svg" | sed 's/\(.*\)\/\([^\/]*\)\.svg/\2/')
+
+# Convert the js_images and image_files into arrays
+IFS=$'\n' read -r -d '' -a js_image_array <<< "$js_images"
+IFS=$'\n' read -r -d '' -a image_file_array <<< "$image_files"
+
+# Check if images in JS file exist in the images directory
+only_in_js=()
+only_in_images=()
+
+# Compare the two arrays
+for js_image in "${js_image_array[@]}"; do
+    if [[ ! " ${image_file_array[@]} " =~ " ${js_image} " ]]; then
+        only_in_js+=("$js_image")
+    fi
+done
+
+for image_file in "${image_file_array[@]}"; do
+    if [[ ! " ${js_image_array[@]} " =~ " ${image_file} " ]]; then
+        only_in_images+=("$image_file")
+    fi
+done
+
+# Echo the results
+if [ ${#only_in_js[@]} -gt 0 ]; then
+    echo "These images are only in the JS file:"
+    printf '%s\n' "${only_in_js[@]}"
+else
+    echo "No images are exclusive to the JS file."
+fi
+
+if [ ${#only_in_images[@]} -gt 0 ]; then
+    echo "These images are only in the images folder:"
+    printf '%s\n' "${only_in_images[@]}"
+else
+    echo "No images are exclusive to the images folder."
+fi
