@@ -22,9 +22,7 @@ const imageFilenames = [
     "jesus_wept_logo_images",
     "kneel_before_God_logo_image",
     "serving_christ_logo_image",
-    "soldiers_of_God_vector_images",
     "the_good_sheferd_gospel_logo_image",
-    "the_power_is_the_name",
     "the_power_is_the_name_gospel_logo_image",
     "the_way_the_truth_gospel_logo_image",
     "keep_silent", 
@@ -91,14 +89,11 @@ const imageFilenames = [
     "california_logo_image",
     "drive_it_like_you_stole_it_logo_design",
     "gospel's_clear_than_clarity_gospel_vector_design",
-    "his_mercies_are_sufficient_gospel_logo_design",
     "its_your_prayer_gospel_logo_design",
     "new_anguka_nayo_logo_design",
     "nganja_head_logo_design",
     "nganya_infinity_logo_design",
-    "only_one_king_vector_image",
-    "shoot_on_sight_logo_design",
-    "slay_logo_design"
+    "only_one_king_vector_image" 
 
 
 
