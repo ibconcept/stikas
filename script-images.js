@@ -94,7 +94,6 @@ const imageFilenames = [
     "gospel's_clear_than_clarity_gospel_vector_design",
     "his_mercies_are_sufficient_gospel_logo_design",
     "its_your_prayer_gospel_logo_design",
-    "lets_all_get_a_bong",
     "new_anguka_nayo_logo_design",
     "nganja_head_logo_design",
     "nganya_infinity_logo_design",
