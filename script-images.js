@@ -11,7 +11,6 @@ const imageFilenames = [
     "24_gospel_vector_image",
     "4x4_off_road_logo_image",
     "adonai_gospel_logo_images",
-    "bad_girl_logo_images",
     "christ_is_alive_vector_image",
     "focus_jesus_gospel_logo_image",
     "grow_in_the_lord_vector_image",
