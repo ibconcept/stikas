@@ -95,24 +95,21 @@
   
   <div class="header">
     <div class="logo">Stikas</div>
- 
     <nav>
-    <span> 
-      |
-      <a href="matatu-logos.html">Matatu Stickers </a> |
-      <a href="gospel-logos.html">Faith Stickers </a> |
-       <a href="misemos.html">Fun Quotes</a> |
-       <a href="bumper-stickers.html"> Bumper Stickers (Private Cars) </a> |
-      <a href="wise-man-quotes.html"> Wisdom Quotes </a> | 
-      <a href="design-tools.html">Design-Tools </a> |
-      <a href="blogs.html">Blogs </a> |
-      <a href="new-logos.html">New Logos </a> |
- 
-       
-      </span>
-       
+      <span class="hamburger" onclick="toggleMenu()">☰</span>
+      <div class="nav-links" id="menu">
+        <a href="matatu-logos.html">Matatu Stickers</a>
+        <a href="gospel-logos.html">Faith Stickers</a>
+        <a href="misemos.html">Fun Quotes</a>
+        <a href="bumper-stickers.html">Bumper Stickers (Private Cars)</a>
+        <a href="wise-man-quotes.html">Wisdom Quotes</a>
+        <a href="design-tools.html">Design Tools</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="new-logos.html">New Logos</a>
+      </div>
     </nav>
-
+    
+  
   </div>
  
   <main>
@@ -208,7 +205,17 @@
    
   <div>
  
- 
+   <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        menu.style.display = menu.style.display === "block" ? "none" : "block";
+      }
+    </script>
+
+
+
+
+
     <a href="#cardContainer"> <h2> To download, just select and save as svg </h2> </a>
  <input class="search-box" style="width: 50vw; display: block; margin: 0 auto;" type="text" id="searchInput" placeholder="Search logo..." />
  <script src="search.js"></script>

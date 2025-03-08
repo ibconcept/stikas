@@ -44,7 +44,6 @@ const imageFilenames = [
     "jesus-in-our-hearts-vector-logo",
     "jesus-in-our-vector-logo",
     "panda stoning-log-vector",
-    "pray&listen-vector-logo",
     "heart_line_faith_hope_love_vector",
     "Che_Guevara", 
     "all_wheel_drive",
