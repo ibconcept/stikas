@@ -100,12 +100,6 @@ const imageFilenames = [
 
 
 
-
-
-
-
-
-
 ];
 
 function getRandomImageFilename() {
