@@ -1,0 +1,430 @@
+
+// export.json
+
+{
+  "user": {
+    "avatar_url": "https://cdn.dribbble.com/users/5045238/avatars/normal/f42d34b1f6be54dd3e89aa356bd6cabe.png?1691352178",
+    "bio": "William Maina is a multi-disciplinary web designer /developer and data scientist with interest and skills in web and graphic design, UX/UI design, data analysis, data science, and AI. I have passion for creating innovative solutions that merge design and technology is evident in his visually stunning and user-friendly websites and applications that are backed by data-driven insights. With a deep understanding of user behavior, William is skilled in designing interfaces that are both aesthetically pleasing and easy to use.",
+    "created_at": "2020-03-25 17:42:21 -0400",
+    "html_url": "https://dribbble.com/mainadev",
+    "links": {
+      "web": "https://williammaina.myportfolio.com/",
+      "twitter": "https://twitter.com/MainahDev",
+      "facebook": "https://facebook.com/william.maina.96",
+      "instagram": "https://instagram.com/ib_concept",
+      "github": "https://github.com/ibconcept",
+      "medium": "https://medium.com/@williammaina",
+      "linkedin": "https://www.linkedin.com/in/williammaina"
+    },
+    "location": "Nairobi, Kenya",
+    "login": "mainadev",
+    "name": "William Maina"
+  },
+  "shots": [
+    {
+      "id": 15588507,
+      "title": "R",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=2560x1440",
+        "normal": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=800x600",
+        "four_x": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=1600x1200"
+      },
+      "tags": [],
+      "html_url": "https://dribbble.com/shots/15588507-R",
+      "published_at": "2021-05-03T11:00:55Z"
+    },
+    {
+      "id": 15588594,
+      "title": "Kazamwendo ADRIAN LOCI",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/31584105/file/original-eb6dcd647dba1a35b81d09ebe74b8459.jpg?resize=1200x1200",
+        "normal": "https://cdn.dribbble.com/userupload/31584105/file/original-eb6dcd647dba1a35b81d09ebe74b8459.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/31584105/file/original-eb6dcd647dba1a35b81d09ebe74b8459.jpg?resize=400x300"
+      },
+      "tags": [],
+      "html_url": "https://dribbble.com/shots/15588594-Kazamwendo-ADRIAN-LOCI",
+      "published_at": "2021-05-03T11:14:23Z"
+    },
+    {
+      "id": 15642080,
+      "title": "packaging design",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/31691509/file/original-b966544c4f2d417dac875138dd95e197.png?resize=2134x1601",
+        "normal": "https://cdn.dribbble.com/userupload/31691509/file/original-b966544c4f2d417dac875138dd95e197.png?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/31691509/file/original-b966544c4f2d417dac875138dd95e197.png?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/31691509/file/original-b966544c4f2d417dac875138dd95e197.png?resize=800x600"
+      },
+      "tags": [],
+      "html_url": "https://dribbble.com/shots/15642080-packaging-design",
+      "published_at": "2021-05-12T07:11:25Z"
+    },
+    {
+      "id": 15689912,
+      "title": "friday2",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/31790822/file/original-d2a994adbc6019e2bc09cae89050c4fc.jpg?resize=1200x1200",
+        "normal": "https://cdn.dribbble.com/userupload/31790822/file/original-d2a994adbc6019e2bc09cae89050c4fc.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/31790822/file/original-d2a994adbc6019e2bc09cae89050c4fc.jpg?resize=400x300"
+      },
+      "tags": [],
+      "html_url": "https://dribbble.com/shots/15689912-friday2",
+      "published_at": "2021-05-20T11:12:42Z"
+    },
+    {
+      "id": 15690189,
+      "title": "king typo logo",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/31791448/file/original-697a55b2ae7e9ad988a1a00919aa43f9.jpg?resize=1574x789",
+        "normal": "https://cdn.dribbble.com/userupload/31791448/file/original-697a55b2ae7e9ad988a1a00919aa43f9.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/31791448/file/original-697a55b2ae7e9ad988a1a00919aa43f9.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/31791448/file/original-697a55b2ae7e9ad988a1a00919aa43f9.jpg?resize=800x600"
+      },
+      "tags": [],
+      "html_url": "https://dribbble.com/shots/15690189-king-typo-logo",
+      "published_at": "2021-05-20T11:59:41Z"
+    },
+    {
+      "id": 25677077,
+      "title": "Church convention poster",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36463443/file/original-b7f21adbc1bc34c3a9b108fa9a78b092.jpg?resize=1500x1800",
+        "normal": "https://cdn.dribbble.com/userupload/36463443/file/original-b7f21adbc1bc34c3a9b108fa9a78b092.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36463443/file/original-b7f21adbc1bc34c3a9b108fa9a78b092.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36463443/file/original-b7f21adbc1bc34c3a9b108fa9a78b092.jpg?resize=800x600"
+      },
+      "tags": [
+        "church",
+        "convetion",
+        "event",
+        "graphic design",
+        "logo",
+        "poster"
+      ],
+      "html_url": "https://dribbble.com/shots/25677077-Church-convention-poster",
+      "published_at": "2025-02-24T15:59:06Z"
+    },
+    {
+      "id": 25677084,
+      "title": "Cafe/hotel menu board poster",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36463482/file/original-2d40068692439056f4a25a3368467263.jpg?resize=3299x7088",
+        "normal": "https://cdn.dribbble.com/userupload/36463482/file/original-2d40068692439056f4a25a3368467263.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36463482/file/original-2d40068692439056f4a25a3368467263.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36463482/file/original-2d40068692439056f4a25a3368467263.jpg?resize=800x600",
+        "four_x": "https://cdn.dribbble.com/userupload/36463482/file/original-2d40068692439056f4a25a3368467263.jpg?resize=1600x1200",
+        "six_x": "https://cdn.dribbble.com/userupload/36463482/file/original-2d40068692439056f4a25a3368467263.jpg?resize=2400x1800",
+        "eight_x": "https://cdn.dribbble.com/userupload/36463482/file/original-2d40068692439056f4a25a3368467263.jpg?resize=3200x2400"
+      },
+      "tags": [
+        "cafe",
+        "chai",
+        "chapati",
+        "design",
+        "dishes",
+        "food",
+        "githeri",
+        "graphics design",
+        "kenya",
+        "menu",
+        "poster",
+        "poster design",
+        "ugali",
+        "web design"
+      ],
+      "html_url": "https://dribbble.com/shots/25677084-Cafe-hotel-menu-board-poster",
+      "published_at": "2025-02-24T16:01:59Z"
+    },
+    {
+      "id": 25677105,
+      "title": "Black n white \"whitehouse\" tshirt mock up",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36463623/file/original-0e775cb01128b7917f9f5b9cf4f3d6ff.jpg?resize=3500x1154",
+        "normal": "https://cdn.dribbble.com/userupload/36463623/file/original-0e775cb01128b7917f9f5b9cf4f3d6ff.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36463623/file/original-0e775cb01128b7917f9f5b9cf4f3d6ff.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36463623/file/original-0e775cb01128b7917f9f5b9cf4f3d6ff.jpg?resize=800x600",
+        "four_x": "https://cdn.dribbble.com/userupload/36463623/file/original-0e775cb01128b7917f9f5b9cf4f3d6ff.jpg?resize=1600x1200",
+        "six_x": "https://cdn.dribbble.com/userupload/36463623/file/original-0e775cb01128b7917f9f5b9cf4f3d6ff.jpg?resize=2400x1800",
+        "eight_x": "https://cdn.dribbble.com/userupload/36463623/file/original-0e775cb01128b7917f9f5b9cf4f3d6ff.jpg?resize=3200x2400"
+      },
+      "tags": [
+        "designgraphic design",
+        "logo design",
+        "mockup",
+        "tshirt",
+        "tshirt mockup design",
+        "web design",
+        "whitehouse"
+      ],
+      "html_url": "https://dribbble.com/shots/25677105-Black-n-white-whitehouse-tshirt-mock-up",
+      "published_at": "2025-02-24T16:04:08Z"
+    },
+    {
+      "id": 25681446,
+      "title": "Matatu culture mwatwana culture",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36542254/file/original-f775a2f2cf3dcbf259115b1d916d5c2e.jpg?resize=1600x1920",
+        "normal": "https://cdn.dribbble.com/userupload/36542254/file/original-f775a2f2cf3dcbf259115b1d916d5c2e.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36542254/file/original-f775a2f2cf3dcbf259115b1d916d5c2e.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36542254/file/original-f775a2f2cf3dcbf259115b1d916d5c2e.jpg?resize=800x600",
+        "four_x": "https://cdn.dribbble.com/userupload/36542254/file/original-f775a2f2cf3dcbf259115b1d916d5c2e.jpg?resize=1600x1200"
+      },
+      "tags": [
+        "branding",
+        "graphic design",
+        "ibconcept",
+        "ibconcept design agency",
+        "levi",
+        "ma3",
+        "ma3roue",
+        "manyanga",
+        "matatu",
+        "matatu galore",
+        "matwana",
+        "mombasa matatuculture",
+        "stikas",
+        "stikas.xyz"
+      ],
+      "html_url": "https://dribbble.com/shots/25681446-Matatu-culture-mwatwana-culture",
+      "published_at": "2025-02-25T11:37:00Z"
+    },
+    {
+      "id": 25687691,
+      "title": "reflector jacket mockup",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36976953/file/original-a8d46d204916d0b5bba6b992515eea6b.jpg?resize=1499x1039",
+        "normal": "https://cdn.dribbble.com/userupload/36976953/file/original-a8d46d204916d0b5bba6b992515eea6b.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36976953/file/original-a8d46d204916d0b5bba6b992515eea6b.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36976953/file/original-a8d46d204916d0b5bba6b992515eea6b.jpg?resize=800x600"
+      },
+      "tags": [
+        "designkenya",
+        "dtf",
+        "dtg",
+        "jacket",
+        "mockup",
+        "nairobi",
+        "nairobi printing",
+        "no cut",
+        "printer",
+        "printing",
+        "promo",
+        "promotional items",
+        "reflector",
+        "reflector jacket mockup",
+        "sublimation",
+        "vinyl"
+      ],
+      "html_url": "https://dribbble.com/shots/25687691-reflector-jacket-mockup",
+      "published_at": "2025-02-26T13:43:47Z"
+    },
+    {
+      "id": 25687697,
+      "title": "Dust coat mock up design",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36977254/file/original-11250ecb3374a23f3948365d6e67b45c.png?resize=770x477",
+        "normal": "https://cdn.dribbble.com/userupload/36977254/file/original-11250ecb3374a23f3948365d6e67b45c.png?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36977254/file/original-11250ecb3374a23f3948365d6e67b45c.png?resize=400x300"
+      },
+      "tags": [
+        "brand",
+        "branding print",
+        "coat",
+        "designagency designer",
+        "dtf",
+        "dust coat",
+        "ibconept",
+        "ibprinting",
+        "industrial",
+        "items",
+        "kenya",
+        "nairobi",
+        "no cut",
+        "print",
+        "printed"
+      ],
+      "html_url": "https://dribbble.com/shots/25687697-Dust-coat-mock-up-design",
+      "published_at": "2025-02-26T13:45:56Z"
+    },
+    {
+      "id": 25687708,
+      "title": "lab_coat_mockup",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36977599/file/original-8a60b5541018e3440e543f4a0345672e.png?resize=2528x2483",
+        "normal": "https://cdn.dribbble.com/userupload/36977599/file/original-8a60b5541018e3440e543f4a0345672e.png?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36977599/file/original-8a60b5541018e3440e543f4a0345672e.png?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36977599/file/original-8a60b5541018e3440e543f4a0345672e.png?resize=800x600",
+        "four_x": "https://cdn.dribbble.com/userupload/36977599/file/original-8a60b5541018e3440e543f4a0345672e.png?resize=1600x1200",
+        "six_x": "https://cdn.dribbble.com/userupload/36977599/file/original-8a60b5541018e3440e543f4a0345672e.png?resize=2400x1800"
+      },
+      "tags": [
+        "branding",
+        "cooporate printers",
+        "graphic design",
+        "lab coat",
+        "logo design",
+        "nairobi printing",
+        "no cut",
+        "print",
+        "printers",
+        "promotional items printing",
+        "tshirt printing"
+      ],
+      "html_url": "https://dribbble.com/shots/25687708-lab-coat-mockup",
+      "published_at": "2025-02-26T13:48:01Z"
+    },
+    {
+      "id": 25687716,
+      "title": "matatu ma3 43 design concept",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36977958/file/original-f003af8bd390f1c2dd9458c4d9db135d.jpg?resize=4632x3032",
+        "normal": "https://cdn.dribbble.com/userupload/36977958/file/original-f003af8bd390f1c2dd9458c4d9db135d.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36977958/file/original-f003af8bd390f1c2dd9458c4d9db135d.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36977958/file/original-f003af8bd390f1c2dd9458c4d9db135d.jpg?resize=800x600",
+        "four_x": "https://cdn.dribbble.com/userupload/36977958/file/original-f003af8bd390f1c2dd9458c4d9db135d.jpg?resize=1600x1200",
+        "six_x": "https://cdn.dribbble.com/userupload/36977958/file/original-f003af8bd390f1c2dd9458c4d9db135d.jpg?resize=2400x1800",
+        "eight_x": "https://cdn.dribbble.com/userupload/36977958/file/original-f003af8bd390f1c2dd9458c4d9db135d.jpg?resize=3200x2400"
+      },
+      "tags": [
+        "adriana",
+        "design",
+        "ibconcept",
+        "ibconcept design agency",
+        "manyanga",
+        "matatu",
+        "matatu culture",
+        "matwana",
+        "matwana culture",
+        "nairobi printer",
+        "print",
+        "vehicle branding",
+        "vehicle wrapping"
+      ],
+      "html_url": "https://dribbble.com/shots/25687716-matatu-ma3-43-design-concept",
+      "published_at": "2025-02-26T13:51:01Z"
+    },
+    {
+      "id": 25687734,
+      "title": "simba cool poster design",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36978402/file/original-c52b87e25a627f7af1a81552e6bb6a39.jpg?resize=6000x4750",
+        "normal": "https://cdn.dribbble.com/userupload/36978402/file/original-c52b87e25a627f7af1a81552e6bb6a39.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36978402/file/original-c52b87e25a627f7af1a81552e6bb6a39.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36978402/file/original-c52b87e25a627f7af1a81552e6bb6a39.jpg?resize=800x600",
+        "four_x": "https://cdn.dribbble.com/userupload/36978402/file/original-c52b87e25a627f7af1a81552e6bb6a39.jpg?resize=1600x1200",
+        "six_x": "https://cdn.dribbble.com/userupload/36978402/file/original-c52b87e25a627f7af1a81552e6bb6a39.jpg?resize=2400x1800",
+        "eight_x": "https://cdn.dribbble.com/userupload/36978402/file/original-c52b87e25a627f7af1a81552e6bb6a39.jpg?resize=3200x2400"
+      },
+      "tags": [
+        "branding",
+        "business cards",
+        "design",
+        "designers",
+        "designs",
+        "graphic design",
+        "ibconcept",
+        "kenya",
+        "letter heads",
+        "logo",
+        "nairobi",
+        "poster",
+        "printers",
+        "printing",
+        "simba cool",
+        "webdesign"
+      ],
+      "html_url": "https://dribbble.com/shots/25687734-simba-cool-poster-design",
+      "published_at": "2025-02-26T13:53:38Z"
+    },
+    {
+      "id": 25687747,
+      "title": "driving school concept design",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/36978705/file/original-e03567f67f5556d24fad3740b4140297.jpg?resize=1307x420",
+        "normal": "https://cdn.dribbble.com/userupload/36978705/file/original-e03567f67f5556d24fad3740b4140297.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/36978705/file/original-e03567f67f5556d24fad3740b4140297.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/36978705/file/original-e03567f67f5556d24fad3740b4140297.jpg?resize=800x600"
+      },
+      "tags": [
+        "branding",
+        "car branding",
+        "corporate branding",
+        "custom design",
+        "designvehicle wrapping",
+        "driving school",
+        "graphic design",
+        "ibconept",
+        "logo",
+        "office branding",
+        "printer",
+        "promo",
+        "school designs"
+      ],
+      "html_url": "https://dribbble.com/shots/25687747-driving-school-concept-design",
+      "published_at": "2025-02-26T13:55:52Z"
+    },
+    {
+      "id": 25705135,
+      "title": "Happy birthday poster banner for  mp Amos Mwago amondiobest",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/37436842/file/original-a5f5cdb9079cdd8ee9459636d70afc6e.jpg?resize=1799x3756",
+        "normal": "https://cdn.dribbble.com/userupload/37436842/file/original-a5f5cdb9079cdd8ee9459636d70afc6e.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/37436842/file/original-a5f5cdb9079cdd8ee9459636d70afc6e.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/37436842/file/original-a5f5cdb9079cdd8ee9459636d70afc6e.jpg?resize=800x600",
+        "four_x": "https://cdn.dribbble.com/userupload/37436842/file/original-a5f5cdb9079cdd8ee9459636d70afc6e.jpg?resize=1600x1200"
+      },
+      "tags": [
+        "birthday poster",
+        "brithday",
+        "card",
+        "design card",
+        "graphic design",
+        "green",
+        "poster"
+      ],
+      "html_url": "https://dribbble.com/shots/25705135-Happy-birthday-poster-banner-for-mp-Amos-Mwago-amondiobest",
+      "published_at": "2025-03-02T12:08:02Z"
+    },
+    {
+      "id": 25745819,
+      "title": "kssf christmas poster",
+      "description": null,
+      "images": {
+        "hidpi": "https://cdn.dribbble.com/userupload/41515462/file/original-5584f7922b9c55160a4af4935fb1085a.jpg?resize=1500x1500",
+        "normal": "https://cdn.dribbble.com/userupload/41515462/file/original-5584f7922b9c55160a4af4935fb1085a.jpg?resize=400x300",
+        "one_x": "https://cdn.dribbble.com/userupload/41515462/file/original-5584f7922b9c55160a4af4935fb1085a.jpg?resize=400x300",
+        "two_x": "https://cdn.dribbble.com/userupload/41515462/file/original-5584f7922b9c55160a4af4935fb1085a.jpg?resize=800x600"
+      },
+      "tags": [
+        "branding",
+        "christmas",
+        "designs",
+        "gold",
+        "green",
+        "ibconcept",
+        "kenya",
+        "poster",
+        "xmas"
+      ],
+      "html_url": "https://dribbble.com/shots/25745819-kssf-christmas-poster",
+      "published_at": "2025-03-10T20:25:38Z"
+    }
+  ]
+}

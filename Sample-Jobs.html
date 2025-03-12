@@ -1,152 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stikas sample jobs(creative common ideas on stickers - matatu , cars, decors)</title>
-  <link rel="icon" href="https://stikas.xyz/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="https://stikas.xyz/favicon.ico" type="image/x-icon">
-  <link rel="alternate" href="https://stikas.xyz/en/" hreflang="en">
-  <link rel="alternate" href="https://stikas.xyz/es/" hreflang="es">
-  
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- SEO Meta Tags -->
-  <meta name="stikas" content="Innovative Stickers products and solutions">
-  <meta name="keywords"
-    content="matatu stickers, PSV stickers, stikas.xyz, car stickers, bumper stickers, office stickers, t-shirt stickers, funny stickers, gospel stickers, sheng stickers, trendy stickers">
-
-  <meta name="description" content="matatu stickers, psv stickers, stikas.xyz, car stickers, bumper stickers, office stickers, t-shirt stickers, funny stickers, gospel stickers, sheng stickers, trendy stickers,
-  description of stikas its innovative products and solutions">
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="stikas car stickers, bumper stickers,">
-  <meta property="og:description" content="stikas car stickers, bumper stickers,">
-  <meta property="og:image" content="https://www.stikas.xyz">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Meta Tags for better visibility on Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="stikas learners items">
-  <meta name="twitter:description" content="stikas innovative car stickers, bumper stickers,">
-  <meta name="twitter:image" content="https://www.stikas.xyz">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- Mobile App Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
-
-  <!-- Canonical URL for search engines -->
-  <link rel="canonical" href="https://www.stikas.xyz">
-
-  <!-- SEO Meta Tags -->
-  <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-  <meta name="google" content="notranslate">
-
-  <!-- Author Meta Tag -->
-  <meta name="author" content="stikas-design-agency">
-
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-
-    // Close menu when clicking outside
-    document.addEventListener("click", function (event) {
-      const menu = document.getElementById("menu");
-      const hamburger = document.querySelector(".hamburger");
-
-      if (menu.style.display === "block" && !menu.contains(event.target) && !hamburger.contains(event.target)) {
-        menu.style.display = "none";
-      }
-    });
-
-    // Prevent click inside menu from closing it
-    document.getElementById("menu").addEventListener("click", function (event) {
-      event.stopPropagation();
-    });
-  </script>
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-100TJFT7QY"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-100TJFT7QY');
-  </script>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stikas</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Your external CSS file -->
 </head>
-
 <body>
 
-  <div class="header">
-    <div class="logo">Stikas</div>
+    <div class="header">
+        <div class="logo">Stikas</div>
 
-    <nav>
-      <span class="pc-menu">
-        <a href="matatu-logos.html">Matatu Stickers</a>
-        <a href="gospel-logos.html">Gospel-logos Stickers</a>
-        <a href="misemos.html">Fun Quotes</a>
-        <a href="bumper-stickers.html">Bumper Stickers (Private Cars)</a>
-        <a href="wise-man-quotes.html">Wisdom Quotes</a>
-        <a href="design-tools.html">Design Tools</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="new-logos.html">New Logos</a>
-      </span>
+        <nav>
+            <span class="pc-menu">
+                <a href="matatu-logos.html">Matatu Stickers</a>
+                <a href="gospel-logos.html">Gospel-logos Stickers</a>
+                <a href="misemos.html">Fun Quotes</a>
+                <a href="bumper-stickers.html">Bumper Stickers (Private Cars)</a>
+                <a href="wise-man-quotes.html">Wisdom Quotes</a>
+                <a href="design-tools.html">Design Tools</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="new-logos.html">New Logos</a>
+            </span>
 
-      <span class="hamburger" onclick="toggleMenu()">☰</span>
-      <div class="nav-links" id="menu">
-        <a href="matatu-logos.html">Matatu Stickers</a>
-        <a href="gospel-logos.html">Gospel-logos Stickers</a>
-        <a href="misemos.html">Fun Quotes</a>
-        <a href="bumper-stickers.html">Bumper Stickers (Private Cars)</a>
-        <a href="wise-man-quotes.html">Wisdom Quotes</a>
-        <a href="design-tools.html">Design Tools</a>
-        <a href="blogs.html">Blogs</a>
-        <a href="new-logos.html">New Logos</a>
-      </div>
-    </nav>
-  </div>
-
-  <main>
-    <div class="dribbble-embed-container">
-      <iframe src="https://dribbble.com/infinitious" frameborder="0" width="100%" height="600" style="border: none; overflow: hidden;" scrolling="no"></iframe>
+            <span class="hamburger" onclick="toggleMenu()">☰</span>
+            <div class="nav-links" id="menu">
+                <a href="matatu-logos.html">Matatu Stickers</a>
+                <a href="gospel-logos.html">Gospel-logos Stickers</a>
+                <a href="misemos.html">Fun Quotes</a>
+                <a href="bumper-stickers.html">Bumper Stickers (Private Cars)</a>
+                <a href="wise-man-quotes.html">Wisdom Quotes</a>
+                <a href="design-tools.html">Design Tools</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="new-logos.html">New Logos</a>
+            </div>
+        </nav>
     </div>
-  </main>
 
-  <style>
-    /* Make the iframe responsive */
-    .dribbble-embed-container {
-      max-width: 100%;
-      overflow: hidden;
-      position: relative;
-      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-      height: 0;
-      display: block;
-      background: #f4f4f4;
-    }
+    <div id="dribbble-gallery"></div>
 
-    .dribbble-embed-container iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+    <!-- JavaScript -->
+    <script src="export.js"></script>
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("show-menu");
+        }
+    </script>
 
 </body>
-
 </html>
