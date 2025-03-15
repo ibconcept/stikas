@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const gallery = document.getElementById("dribbble-gallery");
 
     try {
-        const response = await fetch("export.json"); // Ensure file name matches
+        const response = await fetch("export.json");
         const data = await response.json();
 
         if (!data.shots) {
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             link.target = "_blank";
 
             let img = document.createElement("img");
-            img.src = shot.images.normal || shot.images.hidpi || shot.images.one_x; // Use available image
+            img.src = shot.images.normal || shot.images.hidpi || shot.images.one_x;
             img.alt = shot.title;
 
             link.appendChild(img);
