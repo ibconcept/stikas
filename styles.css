@@ -496,10 +496,13 @@ footer {
     border-color: var(--primary-color);
 }
 
+#menu {
+    display: none; /* Default state */
+}
 
-
-
-
+#menu.show-menu {
+    display: block; /* Visible when toggled */
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {

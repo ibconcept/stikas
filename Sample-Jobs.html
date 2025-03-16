@@ -43,7 +43,12 @@
     <script src="export.js"></script>
     <script>
         function toggleMenu() {
-            document.getElementById("menu").classList.toggle("show-menu");
+            const menu = document.getElementById("menu");
+            if (menu) {
+                menu.classList.toggle("show-menu");
+            } else {
+                console.error("Menu element not found");
+            }
         }
     </script>
 
