@@ -386,15 +386,16 @@ footer {
 .order-process {
     width: 40vw;
     background-color: rgba(255, 255, 255, 0.5);
-    padding: 3em;
+    padding: 2em;
     border-radius: 8px;
-    height: 20em;
+    height: auto;
     text-align: right;
     display: flex;
     object-fit: contain;
     margin: 0 auto;
     align-items: flex-start;
     margin-bottom: 2em;
+    font-size: small;
 }
 
 /* Image Style */
@@ -513,19 +514,6 @@ footer {
         margin-right: 60%;
     }
 
-
-
-
-
-    /* Order Process Fix */
-    .order-process {
-        width: 90vw;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: 1rem;
-        gap: 1rem;
-    }
 
     .hero-slide img {
         width: 80%;

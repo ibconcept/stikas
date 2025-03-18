@@ -117,6 +117,7 @@ for (let i = 0; i < numberOfCards; i++) {
     const imagePath = `images/${imageFilename}.SVG`; 
     const image = document.createElement("img");
     image.src = imagePath;
+    image.alt = imageFilename;
 
     const caption = document.createElement("figcaption");
     caption.textContent = imageFilename;
