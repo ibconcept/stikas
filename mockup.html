@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Mockup Page</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script> <!-- For 3D rendering -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Google Material Icons -->
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            height: 100vh;
+            position: fixed;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+        }
+        .sidebar ul li a .material-icons {
+            margin-right: 10px;
+        }
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+            width: calc(100% - 270px);
+        }
+        .header {
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .mockup-section {
+            margin-bottom: 40px;
+        }
+        .mockup-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .mockup-container img {
+            max-width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .mockup-container input {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#car"><span class="material-icons">directions_car</span>Car</a></li>
+            <li><a href="#matatu"><span class="material-icons">airport_shuttle</span>Matatu</a></li>
+            <li><a href="#tshirt"><span class="material-icons">checkroom</span>T-Shirt</a></li>
+            <li><a href="#cup"><span class="material-icons">local_cafe</span>Cup</a></li>
+            <li><a href="#dustcoat"><span class="material-icons">work</span>Dust Coat</a></li>
+            <li><a href="#motorbike"><span class="material-icons">two_wheeler</span>Motorbike</a></li>
+            <li><a href="#signage"><span class="material-icons">storefront</span>Signage</a></li>
+            <li><a href="#umbrella"><span class="material-icons">umbrella</span>Umbrella</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="header">
+            <a href="index.html" >← Back to Stikas</a>
+        </div>
+
+        <!-- Mockup Sections -->
+        <section id="car" class="mockup-section">
+            <h2>Car Mockup</h2>
+            <div class="mockup-container">
+                <div>
+                    <input type="file" accept="image/*" id="car-logo" />
+                    <input type="file" accept="image/*" id="car-image" />
+                </div>
+                <img src="sample-car.jpg" alt="Car Mockup Sample">
+            </div>
+        </section>
+
+        <section id="matatu" class="mockup-section">
+            <h2>Matatu Mockup</h2>
+            <div class="mockup-container">
+                <div>
+                    <input type="file" accept="image/*" id="matatu-logo" />
+                    <input type="file" accept="image/*" id="matatu-image" />
+                </div>
+                <img src="sample-matatu.jpg" alt="Matatu Mockup Sample">
+            </div>
+        </section>
+
+        <section id="tshirt" class="mockup-section">
+            <h2>T-Shirt Mockup</h2>
+            <div class="mockup-container">
+                <div>
+                    <input type="file" accept="image/*" id="tshirt-logo" />
+                    <input type="file" accept="image/*" id="tshirt-image" />
+                </div>
+                <img src="sample-tshirt.jpg" alt="T-Shirt Mockup Sample">
+            </div>
+        </section>
+
+        <section id="cup" class="mockup-section">
+            <h2>Cup Mockup</h2>
+            <div class="mockup-container">
+                <div>
+                    <input type="file" accept="image/*" id="cup-logo" />
+                    <input type="file" accept="image/*" id="cup-image" />
+                </div>
+                <img src="sample-cup.jpg" alt="Cup Mockup Sample">
+            </div>
+        </section>
+
+        <section id="dustcoat" class="mockup-section">
+            <h2>Dust Coat Mockup</h2>
+            <div class="mockup-container">
+                <div>
+                    <input type="file" accept="image/*" id="dustcoat-logo" />
+                    <input type="file" accept="image/*" id="dustcoat-image" />
+                </div>
+                <img src="sample-dustcoat.jpg" alt="Dust Coat Mockup Sample">
+            </div>
+        </section>
+
+        <section id="motorbike" class="mockup-section">
+            <h2>Motorbike Mockup</h2>
+            <div class="mockup-container">
+                <div>
+                    <input type="file" accept="image/*" id="motorbike-logo" />
+                    <input type="file" accept="image/*" id="motorbike-image" />
+                </div>
+                <img src="sample-motorbike.jpg" alt="Motorbike Mockup Sample">
+            </div>
+        </section>
+
+        <section id="signage" class="mockup-section">
+            <h2>Signage Mockup</h2>
+            <div class="mockup-container">
+                <div>
+                    <input type="file" accept="image/*" id="signage-logo" />
+                    <input type="file" accept="image/*" id="signage-image" />
+                </div>
+                <img src="sample-signage.jpg" alt="Signage Mockup Sample">
+            </div>
+        </section>
+
+        <section id="umbrella" class="mockup-section">
+            <h2>Umbrella Mockup</h2>
+            <div class="mockup-container">
+                <div>
+                    <input type="file" accept="image/*" id="umbrella-logo" />
+                    <input type="file" accept="image/*" id="umbrella-image" />
+                </div>
+                <img src="sample-umbrella.jpg" alt="Umbrella Mockup Sample">
+            </div>
+        </section>
+    </div>
+</body>
+</html>
