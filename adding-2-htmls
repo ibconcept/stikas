@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# AdSense code to be added
+adsense_code='<script src="YOUR_ADSENSE_CODE.js"></script>'
+
+# Loop through all .html files in the current directory
+for file in *.html; do
+  sed -i "s|<head>|<head>\n$adsense_code|" "$file"
+  echo "AdSense code added to $file"
+done
