@@ -1,3 +1,10 @@
+
+
+we need to fix google adsence, and like the rest
+PAGE DEV
+UBBERSUGGEST
+AHEREF ..
+
 add font convertor ... ttf to otf and vs vs
 
 
