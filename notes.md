@@ -1,4 +1,15 @@
+
+
+we need to fix google adsence, and like the rest
+PAGE DEV
+UBBERSUGGEST
+AHEREF ..
+
 add font convertor ... ttf to otf and vs vs
+
+
+use the most liked image to sell to delears and retailers
+<!-- use the most liked image to sell to delears and retailers -->
 
 pick up culture
 matatu culture

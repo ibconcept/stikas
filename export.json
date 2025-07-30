@@ -18,22 +18,7 @@
     "name": "William Maina"
   },
   "shots": [
-    {
-      "id": 15588507,
-      "title": "R",
-      "description": null,
-      "images": {
-        "hidpi": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=2560x1440",
-        "normal": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=400x300",
-        "one_x": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=400x300",
-        "two_x": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=800x600",
-        "four_x": "https://cdn.dribbble.com/userupload/31584037/file/original-985dc1e68b401d316b13c09f1638342f.jpg?resize=1600x1200"
-      },
-      "tags": [],
-      "html_url": "https://dribbble.com/shots/15588507-R",
-      "published_at": "2021-05-03T11:00:55Z"
-    },
-    {
+        {
       "id": 15588594,
       "title": "Kazamwendo ADRIAN LOCI",
       "description": null,

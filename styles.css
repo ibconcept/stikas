@@ -1,14 +1,13 @@
 :root {
-    --background-color: hsl(308, 100%, 92%);
-    /* #d9b69f - Light background */
-    --text-color: hsl(0, 100%, 15%);
-    /* #4b0000 - Dark text */
-    --accent-color: hsl(56, 100%, 88%);
-    /* #941522 - Accent elements */
-    --secondary-color: hsl(59, 100%, 72%);
-    /* #d38c2b - Buttons or highlights */
-    --primary-color: hsl(352, 92%, 57%);
-    /* #fc2544 - Standout elements */
+    --background-color: #f8fafc; /* Light, clean background (like AliceBlue) */
+    --text-color: #18181b; /* Deep dark for contrast */
+    --accent-color: #f59e42; /* Vibrant orange accent */
+    --secondary-color: #ff6f00; /* Pop orange for highlights/buttons */
+    --primary-color: #ff0080; /* Vivid magenta-pink for standout elements */
+    --success-color: #10b981; /* Pop green (rainbow) */
+    --warning-color: #fbbf24; /* Pop yellow (rainbow) */
+    --danger-color: #ef4444; /* Pop red (rainbow) */
+    --info-color: #6366f1; /* Pop purple (rainbow) */
 }
 
 
@@ -61,7 +60,7 @@ body {
     left: 50%;
     z-index: 999;
     transform: translate(-50%, -50%);
-    background: white;
+    background: var(--background-color);
     padding: 20px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -171,11 +170,11 @@ img {
 
 a {
     color: var(--primary-color);
+    background-color: var(--secondary-color);
     text-decoration: none;
     display: inline-block;
     padding: 0.5em;
     border-radius: 0.5em;
-    background-color: var(--secondary-color);
     margin: 0.3em;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
@@ -277,8 +276,8 @@ footer {
 }
 
 .cta-button button {
-    background-color: #FFCC00;
-    color: #000;
+    background-color: var(--accent-color);
+    color: var(--background-color);
     padding: 10px 20px;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
@@ -338,8 +337,8 @@ footer {
 }
 
 .contact-link button {
-    background-color: #00cc44;
-    color: #fff;
+    background-color: var(--success-color);
+    color: var(--background-color);
     border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 5px;
@@ -348,19 +347,19 @@ footer {
 }
 
 .contact-link button:hover {
-    background-color: #008a33;
+    background-color: var(--primary-color);
 }
 
 /* Social Icons */
 .social-links .social-icon {
     font-size: 1.5rem;
-    color: #00cc44;
+    color: var(--info-color);
     margin-right: 1rem;
     transition: color 0.3s ease;
 }
 
 .social-links .social-icon:hover {
-    color: #008a33;
+    color: var(--primary-color);
 }
 
 
@@ -379,13 +378,13 @@ footer {
 }
 
 .footer-navigation a:hover {
-    color: #00cc44;
+    color: var(--accent-color);
 }
 
 /* Order Process Container */
 .order-process {
     width: 40vw;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(248, 250, 252, 0.7); /* semi-transparent light */
     padding: 2em;
     border-radius: 8px;
     height: auto;
@@ -408,18 +407,18 @@ footer {
 
 /* Text Styling */
 .order-details h1 {
-    color: #333;
+    color: var(--accent-color);
 }
 
 .order-details p {
-    color: #555;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 
 /* List Style */
 .order-steps {
     list-style-type: square;
-    color: #555;
+    color: var(--text-color);
     padding-left: 20px;
 }
 
@@ -430,7 +429,7 @@ footer {
 /* Important Message */
 .important-step {
     margin-bottom: 10px;
-    color: red;
+    color: var(--danger-color);
     font-weight: bold;
 }
 
@@ -488,7 +487,7 @@ footer {
     border: 1px solid var(--secondary-color);
     border-radius: 5px;
     font-size: 16px;
-    color: #00cc44;
+    color: var(--accent-color);
     transition: all 0.3s ease;
 }
 
@@ -509,11 +508,16 @@ footer {
 @media (max-width: 768px) {
 
     .logo {
-        font-size: 2.5em;
-        font-weight: bold;
-        margin-right: 60%;
+        color: var(--primary-color);
     }
 
+    .hamburger {
+        display: block;
+    }
+
+    .pc-menu {
+        display: none;
+    }
 
     .hero-slide img {
         width: 80%;
@@ -600,6 +604,14 @@ footer {
    
     .search-box {
         width: 80vw;
-        color: red;
+        color: var(--primary-color);
     }
+}
+
+body, h1, h2, h3, h4, h5, h6, p, span, a, li, label, input, button, .logo, .header, .order-details, .order-steps, .important-step, .nav-links, .card figcaption, .hero-caption, .footer-navigation a, .search-box, #searchInput {
+    color: var(--text-color) !important;
+}
+
+footer, .footer-container, .footer-section, .footer-section *, .footer-content, .footer-content *, .footer-navigation, .footer-navigation * {
+    color: #fff !important;
 }
